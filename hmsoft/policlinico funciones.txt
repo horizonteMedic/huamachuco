@@ -1,0 +1,110 @@
+42664426
+//import sistema.Ingreso;
+  // public static String lasedee;
+   //Ingreso nuevo=new Ingreso();
+  //  lasedee=nuevo.lasede;
+
+create table tipoPruebas(
+idTipo integer primary key,
+descripcion text	
+);
+insert into tipoPruebas values(1,'P1');
+insert into tipoPruebas values(2,'P2');
+insert into tipoPruebas values(3,'P3');
+insert into tipoPruebas values(4,'Pc');
+alter table n_orden_ocupacional add tipoPrueba text;
+update n_orden_ocupacional set tipoprueba=(case when trab_calientes=false and chkcovid1=false and chkcovid2=false  then 'ninguno'
+										   when chkcovid1=false and chkcovid2=false  and trab_calientes=true then 'Pc'
+										   when (chkcovid1=true or chkcovid1=null ) and chkcovid2=false   then 'P1'
+										   when chkcovid1=false and (chkcovid2=true or chkcovid2=null ) then 'P2'
+										   end);
+
+CREATE or replace FUNCTION spFuncionLLenadoPc(elOrden integer,feecha date, satu text ) RETURNS void AS $$
+BEGIN
+INSERT INTO fmedica_covid_marsa (n_orden,fecha,fecha_exra,txtrecomendaciones)values(elOrden,feecha,feecha,'llenado en laboratorio clinico');
+insert into triaje (n_orden,fecha_triaje,sat_02,conclusion) values(elOrden,feecha,satu,'llenado en laboratorio clinico por ser pc');
+insert into constancia_salud_marsa (n_orden,fecha_examen,hora_examen,txtmuestra) values(elOrden,feecha,current_timestamp,'muestra Pc');
+END;
+$$ LANGUAGE plpgsql;
+select *from  sede;
+create SEQUENCE books_sequence
+  start 1
+  increment 1;
+  ALTER TABLE sede DROP COLUMN cod_sede;
+alter table sede add cod_sede integer NOT NULL DEFAULT nextval('books_sequence');
+update sede set estado='1';
+alter table sede add estado bit;
+
+CREATE or replace FUNCTION spFuncionSedeOperaciones(
+	codecode integer,namename text, diredire text,coment text,estest bit, operacion integer ) RETURNS void AS $$
+BEGIN
+if(operacion =1)
+then
+insert into sede(nombre_sede,direccion,comentarios, estado) values(namename,diredire,coment,estest);
+end if;
+if(operacion=2)
+then
+update sede set nombre_sede=namename, direccion=diredire,comentarios=coment,estado=estest where cod_sede=codecode;
+end if;
+if(operacion=3)
+then
+delete from sede where cod_sede=codecode;
+end if;
+
+END;
+$$ LANGUAGE plpgsql;	
+
+// A PARTIR DE ACA ES EDITABLE
+select *from datos_paciente;
+select *from tipo_documento;
+select *from ficha_pruebas_rapidas_covidf100
+select *from n_orden_ocupacional
+
+
+15145
+
+select *from datos_paciente
+
+select *from n_orden_ocupacional limit 10
+
+
+CREATE or replace FUNCTION spfuncionRegistroAutomaticoPaciente(
+	fechaExamen date,tipoDoc text,codecode integer,nombrePac text, apellidoPa text,apellidoMat text, 
+	fechaNaci date,sexo char(1),email text,lugarNac text, nivelEstudio text, ocupacion text,
+	estadoCivil text, direccion text,departamento text, provincia text,distrito text, caserio text,
+	numFijo text,cunCel text,razonEmpresa text,razonContratista text,puestoTrabajo text,area text,
+	nombreExamen text,explotacion text,mineral text, alturaLaboral text
+	) 
+	RETURNS void AS $$
+	declare verificarcod integer;
+ 	declare  genero text;
+BEGIN
+
+if(sexo='MASCULINO')
+THEN
+SET genero='M';
+END IF;
+if (sexo='FEMENINO')
+THEN
+SET genero='M';
+END IF;
+set verificarcod=(select cod_pa from datos_paciente where cod_pa=codecode);
+if (verificarcod is null)
+then
+Insert INTO datos_paciente (cod_pa,nombres_pa,apellidos_pa,fecha_nacimiento_pa,sexo_pa,email_pa,
+							lugar_nac_pa,nivel_est_pa,ocupacion_pa,estado_civil_pa,direccion_pa,
+							departamento_pa,provincia_pa,distrito_pa,caserio_pa,tel_casa_pa,
+							cel_pa,fecha_registro_pa,hora_registro_pa)
+values(codecode,nombrePac,CONCAT(apellidoPa,' ',apellidoMat),fechaNaci,genero,email,lugarNac,nivelEstudio,
+								 ocupacion,estadoCivil,direccion,departamento,provincia,distrito,
+								 caserio,numFijo,cunCel,current_Date,current_time);
+end if;
+INSERT INTO n_orden_ocupacional(cod_pa, razon_empresa, razon_contrata, 
+                        nom_ex, altura_po,mineral_po, fecha_apertura_po,nom_examen,precio_po,
+					   cargo_de,n_medico,n_hora,area_o,tipo_pago)
+values(codecode,razonEmpresa,razonContratista,explotacion,alturaLaboral,mineral,current_Date,nombreExamen,
+	   'S/.0.00',puestoTrabajo,'FRANCK JHONATAN MESTAS VEGA',current_time,area,'EFECTIVO');
+END;
+$$ LANGUAGE plpgsql;
+
+									
