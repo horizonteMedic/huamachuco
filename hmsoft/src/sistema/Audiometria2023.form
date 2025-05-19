@@ -1373,7 +1373,7 @@
                                                   <Component id="jLabel50" min="-2" pref="42" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="8" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
@@ -3448,7 +3448,7 @@
                                   <Component id="jLabel52" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel53" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="chkCASemestral" min="-2" max="-2" attributes="0"/>
                                   <Component id="chkRPASimple" min="-2" max="-2" attributes="0"/>

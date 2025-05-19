@@ -449,6 +449,7 @@ int key = evt.getKeyCode();
                     clsGlobales.sDniOperador = oConn.setResult.getString("dni_user");
                     clsGlobales.sCMPOperador = oConn.setResult.getString("cmp_user");
                     clsGlobales.sRol = oConn.setResult.getString("rol_user");
+                    clsGlobales.sUser = oConn.setResult.getString("usuario_user");
 
                     if (chkAdmision.isSelected() == true) {
                         if (ADMISION_CODIGO == oConn.setResult.getBoolean("admision")) {

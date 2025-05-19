@@ -2791,7 +2791,14 @@ if(!txtImp.getText().isEmpty()){
 
       try 
     {
-        String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"EvaluacionOftalmologica2021.jasper";
+        
+        String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"EvaluacionOftalmologica2021_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"EvaluacionOftalmologica2021.jasper";
+    
         JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
         JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);
         JasperViewer viewer = new JasperViewer(myPrint, false);
@@ -3302,17 +3309,21 @@ private void printer1(Integer cod) {
         Map parameters = new HashMap();
         parameters.put("Norden", cod);
         try {
-            String master = System.getProperty("user.dir")
-                    + "/reportes/EvaluacionOftalmologica2021.jasper";
-
-            System.out.println("master" + master);
-            if (master == null) {
+            String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"EvaluacionOftalmologica2021_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"EvaluacionOftalmologica2021.jasper";
+    
+            System.out.println("master" + direccionReporte);
+            if (direccionReporte == null) {
                 System.out.println("No encuentro el archivo del reporte oftlmologia 2021.");
                 //System.exit(2);
             }
             JasperReport masterReport = null;
             try {
-                masterReport = (JasperReport) JRLoader.loadObject(master);
+                masterReport = (JasperReport) JRLoader.loadObject(direccionReporte);
             } catch (JRException e) {
                 System.out.println("Error cargando el reporte maestro: " + e.getMessage());
                 System.exit(3);

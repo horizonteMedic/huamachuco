@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaDetencionSAS2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="963f3825-0b5e-4502-9e58-18a1b353ee5d">
+	<property name="ireport.zoom" value="1.126972201352378"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="312"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="miestilo">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==1)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#00FFFF" backcolor="#00FFFF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==2)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3399FF" backcolor="#3399FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==3)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9900FF" backcolor="#9900FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==4)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF0099" backcolor="#FF0099"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==5)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#99FF00" backcolor="#99FF00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==6)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF3300" backcolor="#FF3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==7)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF9900" backcolor="#FF9900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==8)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#666666" backcolor="#666666"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==9)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF0033" backcolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==10)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#009900" backcolor="#009900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==11)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#009999" backcolor="#009999"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==12)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#006699" backcolor="#006699"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==13)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#666600" backcolor="#666600"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==14)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#99FF99" backcolor="#99FF99"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==15)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFFF99" backcolor="#FFFF99"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==16)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#666600" backcolor="#666600"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==17)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#330066" backcolor="#330066"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==18)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#999900" backcolor="#999900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==19)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#663300" backcolor="#663300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==20)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CC99FF" backcolor="#CC99FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==21)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#003300" backcolor="#003300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==22)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFCC66" backcolor="#FFCC66"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==23)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF0099" backcolor="#FF0099"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==24)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CC99FF" backcolor="#CC99FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==25)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#0000CC" backcolor="#0000CC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==26)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF6666" backcolor="#FF6666"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==27)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#00CC00" backcolor="#00CC00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==28)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CC0033" backcolor="#CC0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==29)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF6600" backcolor="#FF6600"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==30)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#999900" backcolor="#999900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==31)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#003366" backcolor="#003366"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==32)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#99CC00" backcolor="#99CC00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==33)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFFF66" backcolor="#FFFF66"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==34)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CC3300" backcolor="#CC3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==35)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#00CCCC" backcolor="#00CCCC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==36)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#009900" backcolor="#009900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==37)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#666600" backcolor="#666600"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==38)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF9999" backcolor="#FF9999"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==39)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#6600CC" backcolor="#6600CC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==40)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CCFF99" backcolor="#CCFF99"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==41)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#660000" backcolor="#660000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==42)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF9966" backcolor="#FF9966"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==43)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#99FF99" backcolor="#99FF99"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==44)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CC0066" backcolor="#3366FF">
+				<pen lineStyle="Double" lineColor="#CC0066"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==45)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#66FFFF" backcolor="#FFFF33">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==46)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#00FF00" backcolor="#FF0066">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==47)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF3333" backcolor="#33FF33">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==48)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3300FF" backcolor="#FF66FF">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==49)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#006600" backcolor="#00FFFF">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{color}==50)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#0000FF" backcolor="#FFFF00">
+				<pen lineStyle="Double"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<parameter name="Norden" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT u.nombre_user,u.apellido_user ,u.cmp_user,d.cod_pa, f.txtpuntuacion,t.peso,t.talla,t.imc,t.sistolica,t.diastolica,t.perimetro_cuello,
+       f.*,n.color,(select nombre_sede from sede where cod_sede=n.cod_sede) as nombre_sede,
+(select direccion from sede where cod_sede=4) as dir_tru_pierola,
+(select email from sede where cod_sede=4) as email_tru_pierola,
+(select telefono from sede where cod_sede=4) as telf_tru_pierola,
+(select direccion from sede where cod_sede=3) as dir_huancayo,
+(select email from sede where cod_sede=3) as email_huancayo,
+(select telefono from sede where cod_sede=3) as telf_huancayo,
+(select direccion from sede where cod_sede=2) as dir_huamachuco,
+(select email from sede where cod_sede=2) as email_huamachuco,
+(select telefono from sede where cod_sede=2) as telf_huamachuco,
+(select direccion from sede where cod_sede=1) as dir_trujillo,
+(select email from sede where cod_sede=1) as email_trujillo,
+(select telefono from sede where cod_sede=1) as telf_trujillo,
+(select celular from sede where cod_sede=2) as cel_huamachuco,
+(select celular from sede where cod_sede=4) as cel_trujillo_pie
+FROM datos_paciente AS d
+INNER JOIN n_orden_ocupacional AS n ON(d.cod_pa = n.cod_pa)
+INNER JOIN ficha_sas AS f ON (n.n_orden = f.n_orden)
+INNER JOIN triaje AS t ON (n.n_orden = t.n_orden)
+INNER JOIN usuarios AS u ON (f.dni_user =u.dni_user)
+WHERE f.n_orden = $P{Norden}]]>
+	</queryString>
+	<field name="nombre_user" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre_user"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre_user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="apellido_user" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido_user"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido_user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="cmp_user" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cmp_user"/>
+		<property name="com.jaspersoft.studio.field.label" value="cmp_user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="cod_pa" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cod_pa"/>
+		<property name="com.jaspersoft.studio.field.label" value="cod_pa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_paciente"/>
+	</field>
+	<field name="txtpuntuacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtpuntuacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtpuntuacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="peso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="peso"/>
+		<property name="com.jaspersoft.studio.field.label" value="peso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="talla" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="talla"/>
+		<property name="com.jaspersoft.studio.field.label" value="talla"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="imc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="imc"/>
+		<property name="com.jaspersoft.studio.field.label" value="imc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="sistolica" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sistolica"/>
+		<property name="com.jaspersoft.studio.field.label" value="sistolica"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="diastolica" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="diastolica"/>
+		<property name="com.jaspersoft.studio.field.label" value="diastolica"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="perimetro_cuello" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="perimetro_cuello"/>
+		<property name="com.jaspersoft.studio.field.label" value="perimetro_cuello"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="triaje"/>
+	</field>
+	<field name="cod_sas" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cod_sas"/>
+		<property name="com.jaspersoft.studio.field.label" value="cod_sas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="n_orden" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="n_orden"/>
+		<property name="com.jaspersoft.studio.field.label" value="n_orden"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="licencia_sas" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="licencia_sas"/>
+		<property name="com.jaspersoft.studio.field.label" value="licencia_sas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="tbtrabajanochesi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="tbtrabajanochesi"/>
+		<property name="com.jaspersoft.studio.field.label" value="tbtrabajanochesi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="tbtrabajanocheno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="tbtrabajanocheno"/>
+		<property name="com.jaspersoft.studio.field.label" value="tbtrabajanocheno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtdiastrabajo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtdiastrabajo"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtdiastrabajo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtdescanso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtdescanso"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtdescanso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtanostrabajo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtanostrabajo"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtanostrabajo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbapneasi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbapneasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbapneasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbapneano" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbapneano"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbapneano"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtultimocontrol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtultimocontrol"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtultimocontrol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbhtasi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbhtasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbhtasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbhtano" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbhtano"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbhtano"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtriesgo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtriesgo"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtriesgo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbpsgsi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbpsgsi"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbpsgsi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbpsgno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbpsgno"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbpsgno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="fechapsg" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechapsg"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechapsg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbenminasi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbenminasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbenminasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbenminano" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbenminano"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbenminano"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbfueraminasi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbfueraminasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbfueraminasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="rbfueraminano" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="rbfueraminano"/>
+		<property name="com.jaspersoft.studio.field.label" value="rbfueraminano"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk2_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk2_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk2_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk3_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk3_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk3_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk4_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk4_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk4_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk5_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk5_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk5_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk6_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk6_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk6_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk7_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk7_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk7_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk8_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk8_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk8_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk9_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk9_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk9_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk10_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk10_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk10_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk11_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk11_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk11_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk12_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk12_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk12_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk13_sassi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk13_sassi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk13_sassi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk2_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk2_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk2_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk3_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk3_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk3_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk4_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk4_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk4_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk5_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk5_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk5_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk6_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk6_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk6_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk7_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk7_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk7_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk8_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk8_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk8_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk9_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk9_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk9_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk10_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk10_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk10_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk11_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk11_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk11_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk12_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk12_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk12_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk13_sasno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk13_sasno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk13_sasno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkantsi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkantsi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkantsi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkantno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkantno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkantno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtantecedentefamiliar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtantecedentefamiliar"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtantecedentefamiliar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk2_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk2_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk2_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk3_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk3_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk3_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk4_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk4_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk4_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk5_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk5_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk5_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk6_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk6_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk6_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk7_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk7_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk7_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk8_esi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk8_esi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk8_esi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk2_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk2_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk2_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk3_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk3_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk3_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk4_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk4_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk4_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk5_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk5_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk5_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk6_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk6_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk6_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk7_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk7_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk7_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk8_eno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk8_eno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk8_eno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="COLUMN_78" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtpuntuacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtpuntuacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkvaronsi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkvaronsi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkvaronsi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkvaronno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkvaronno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkvaronno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkmujersi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkmujersi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkmujersi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkmujerno" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkmujerno"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkmujerno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkhtanuevasi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkhtanuevasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkhtanuevasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkhtanuevano" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkhtanuevano"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkhtanuevano"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkgradoi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkgradoi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkgradoi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkgradoii" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkgradoii"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkgradoii"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkgradoiii" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkgradoiii"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkgradoiii"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkgradoiiii" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkgradoiiii"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkgradoiiii"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkaptobajosi" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkaptobajosi"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkaptobajosi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chkaptobajono" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chkaptobajono"/>
+		<property name="com.jaspersoft.studio.field.label" value="chkaptobajono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="txtobservaciones" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="txtobservaciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="txtobservaciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="dni_user" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="dni_user"/>
+		<property name="com.jaspersoft.studio.field.label" value="dni_user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="fecha_sas" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_sas"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_sas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_si" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_si"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_si"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_no" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_si" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_si"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_si"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_no" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="fecha_psg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_psg"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_psg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_sia" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_sia"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_sia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_noa" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_noa"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_noa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_sib" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_sib"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_sib"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_psg_nob" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_psg_nob"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_psg_nob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid1" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid1"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod1" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod1"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid2" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid2"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod2" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod2"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid3" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid3"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod3" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod3"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid4" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid4"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod4" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod4"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid5" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid5"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod5" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod5"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sid6" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sid6"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sid6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_nod6" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_nod6"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_nod6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sie" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sie"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sie"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_noe" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_noe"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_noe"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_sic" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_sic"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_sic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="chk1_apto_noc" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="chk1_apto_noc"/>
+		<property name="com.jaspersoft.studio.field.label" value="chk1_apto_noc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ficha_sas"/>
+	</field>
+	<field name="color" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="color"/>
+		<property name="com.jaspersoft.studio.field.label" value="color"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="n_orden_ocupacional"/>
+	</field>
+	<field name="nombre_sede" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre_sede"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre_sede"/>
+	</field>
+	<field name="dir_tru_pierola" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_tru_pierola"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_tru_pierola"/>
+	</field>
+	<field name="email_tru_pierola" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email_tru_pierola"/>
+		<property name="com.jaspersoft.studio.field.label" value="email_tru_pierola"/>
+	</field>
+	<field name="telf_tru_pierola" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telf_tru_pierola"/>
+		<property name="com.jaspersoft.studio.field.label" value="telf_tru_pierola"/>
+	</field>
+	<field name="dir_huancayo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_huancayo"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_huancayo"/>
+	</field>
+	<field name="email_huancayo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email_huancayo"/>
+		<property name="com.jaspersoft.studio.field.label" value="email_huancayo"/>
+	</field>
+	<field name="telf_huancayo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telf_huancayo"/>
+		<property name="com.jaspersoft.studio.field.label" value="telf_huancayo"/>
+	</field>
+	<field name="dir_huamachuco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_huamachuco"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_huamachuco"/>
+	</field>
+	<field name="email_huamachuco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email_huamachuco"/>
+		<property name="com.jaspersoft.studio.field.label" value="email_huamachuco"/>
+	</field>
+	<field name="telf_huamachuco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telf_huamachuco"/>
+		<property name="com.jaspersoft.studio.field.label" value="telf_huamachuco"/>
+	</field>
+	<field name="dir_trujillo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_trujillo"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_trujillo"/>
+	</field>
+	<field name="email_trujillo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email_trujillo"/>
+		<property name="com.jaspersoft.studio.field.label" value="email_trujillo"/>
+	</field>
+	<field name="telf_trujillo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telf_trujillo"/>
+		<property name="com.jaspersoft.studio.field.label" value="telf_trujillo"/>
+	</field>
+	<field name="cel_huamachuco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cel_huamachuco"/>
+		<property name="com.jaspersoft.studio.field.label" value="cel_huamachuco"/>
+	</field>
+	<field name="cel_trujillo_pie" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cel_trujillo_pie"/>
+		<property name="com.jaspersoft.studio.field.label" value="cel_trujillo_pie"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5fa2740e-1b95-4739-bf2f-3b4bd60c7c47" x="502" y="-14" width="44" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pag. 02]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b37915b0-32ec-4b7e-8e73-345d9756d6e0" x="404" y="-8" width="108" height="20"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{n_orden}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6e43bd18-113f-4bef-ab01-cd4e56f55da5" x="362" y="-3" width="41" height="11"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nº Ficha :]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement uuid="0e756352-ecd5-4854-b1ea-d4de8f780a0b" style="miestilo" x="553" y="-15" width="5" height="47" forecolor="#FFFFFF"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="39da4d82-962c-45f6-aa30-eadf9c986cb4" style="miestilo" mode="Transparent" x="512" y="0" width="39" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{color}.equals(1)?"A":$F{color}.equals(2)?"B":
+$F{color}.equals(3)?"C":$F{color}.equals(4)?"D":
+$F{color}.equals(5)?"E":$F{color}.equals(6)?"F":
+$F{color}.equals(7)?"G":$F{color}.equals(8)?"H":
+$F{color}.equals(9)?"I":$F{color}.equals(10)?"J":
+$F{color}.equals(11)?"K":$F{color}.equals(12)?"L":
+$F{color}.equals(13)?"LL":$F{color}.equals(14)?"M":
+$F{color}.equals(15)?"N":$F{color}.equals(16)?"Ñ":
+$F{color}.equals(17)?"O":$F{color}.equals(18)?"P":
+$F{color}.equals(19)?"Q":$F{color}.equals(20)?"R":
+$F{color}.equals(21)?"S":$F{color}.equals(22)?"T":
+$F{color}.equals(23)?"U":$F{color}.equals(24)?"V":
+$F{color}.equals(25)?"W":$F{color}.equals(26)?"X":
+$F{color}.equals(27)?"Y":$F{color}.equals(28)?"Z":
+$F{color}.equals(29)?"CH":$F{color}.equals(30)?"AB":
+$F{color}.equals(31)?"AC":$F{color}.equals(32)?"AD":
+$F{color}.equals(33)?"AE":$F{color}.equals(34)?"AF":
+$F{color}.equals(35)?"AG":$F{color}.equals(36)?"AH":
+$F{color}.equals(37)?"AI":$F{color}.equals(38)?"AJ":
+$F{color}.equals(39)?"AK":$F{color}.equals(40)?"AL":
+$F{color}.equals(41)?"AM":$F{color}.equals(42)?"AN":
+$F{color}.equals(43)?"AÑ":$F{color}.equals(44)?"AO":
+$F{color}.equals(45)?"AP":$F{color}.equals(46)?"AQ":
+$F{color}.equals(47)?"AR":$F{color}.equals(48)?"AS":
+$F{color}.equals(49)?"AT":$F{color}.equals(50)?"AU":" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fd797f78-89fd-4bf0-84be-3ade5993d91b" x="404" y="12" width="112" height="14"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_sede}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="69" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5563a527-d871-4365-99e9-e509a995207b" x="0" y="0" width="555" height="69"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="4" y="1" width="96" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4. EXÁMEN FÍSICO :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="20ee24b7-546e-43f5-bf77-7c8be86b8515" x="0" y="14" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="18" y="16" width="39" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Peso (Kg):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="181" y="16" width="47" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Talla (mts) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="360" y="16" width="51" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[IMC (Kg/m2) :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="535a5f8c-caac-45a0-a48d-a2d70e599112" x="0" y="30" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="464" y="16" width="86" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(> 35 es de alto riesgo)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8667b3bd-f6d1-4961-a52a-01c2fb30d727" x="0" y="55" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="18" y="32" width="98" height="11"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Circunferencia de cuello :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="10845a1c-1f3d-4858-bdc2-59334ec2660d" x="165" y="14" width="1" height="55"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="181" y="39" width="31" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Normal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="232" y="39" width="31" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SI (      )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="265" y="39" width="37" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NO (      )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="181" y="31" width="106" height="9"/>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[VARÓN (menor de 43,2 cm, es normal)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="360" y="41" width="31" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Normal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="360" y="32" width="114" height="9"/>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MUJER (menor de 40,6 cm, es normal)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="456" y="41" width="46" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NO (       )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="426" y="41" width="31" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SI (      )]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e295fd1b-bf93-4763-8501-087ef1dbafdc" x="342" y="14" width="1" height="55"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="18" y="55" width="47" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[P. Sistólica :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="181" y="56" width="55" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[P. Diastólica :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b59d2875-1443-4033-87de-8831a998e858" x="66" y="15" width="93" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6e0cfaed-8347-4154-9d4a-6c6198010613" x="236" y="16" width="81" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{talla}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="18d9d695-4ff1-43b0-9266-da4ee71764a0" x="417" y="16" width="43" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{imc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="baba104a-de22-4ccb-906f-391d2cac7709" x="33" y="43" width="83" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perimetro_cuello}.concat(" cm.")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0182d1a3-8699-4e7d-befd-ba4f5a086e22" x="247" y="39" width="14" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkvaronsi}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8223cf0b-976e-4d7c-aaa6-7dadc319c183" x="284" y="39" width="11" height="11"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkvaronno}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c2190977-cb84-4efb-a874-cc8858c7836c" x="440" y="41" width="11" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkmujersi}.equals(true)? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a6b6b09a-d364-4476-a141-d0886f0e964d" x="473" y="41" width="12" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkmujerno}.equals(true)? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="abf90f18-7200-4426-bded-a3390ae3944d" x="72" y="56" width="87" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sistolica}.concat(" mmHg.")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2f618e4e-e175-480c-ad62-d152e93d9be4" x="242" y="56" width="81" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diastolica}.concat(" mmHg.")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7192a600-d7e7-43c6-a65f-abcc7e104388" x="360" y="56" width="51" height="12"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[HTA nueva:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a47f6de2-3919-4240-ace5-aa199385fa14" x="453" y="57" width="11" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkhtanuevasi}.equals(true)? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="31fcb67a-44d2-4420-97ab-4630545409ba" x="498" y="57" width="13" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkhtanuevano}.equals(true)? "X":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="520f6be8-0006-4c3a-adc7-5f18182d374b" x="439" y="56" width="38" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SI (        )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8df508b-7655-44e9-962b-8a00fb659ce8" x="479" y="56" width="46" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NO (       )]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="638" splitType="Stretch">
+			<image>
+				<reportElement uuid="c54ad6ce-18fb-46a8-9f11-04666ced992d" x="137" y="14" width="253" height="180"/>
+				<imageExpression><![CDATA["C:\\hmsoft\\reportes\\Imagenes\\fichasasboro.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="cc6fc92a-4b00-4b63-b472-4cfc16303b1e" x="528" y="255" width="23" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b8550ff9-1753-4c7a-9c9b-83f5f0669c9e" x="498" y="255" width="23" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="525d3f7d-948d-4a41-ab9f-b9af479f773c" x="498" y="222" width="23" height="24"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c34fbb79-df4a-44a7-941c-659e64b17089" x="528" y="222" width="23" height="24"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c22a2e12-dfc2-4bc1-86cd-af0daa887e13" x="528" y="331" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9b8c9f02-fda6-444d-bfa4-41e09a879848" x="498" y="331" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="38701e05-2184-4ff7-a56b-ab27b5fe2988" x="528" y="350" width="23" height="78"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="167ccca0-ce64-4d62-b11d-e60644afc537" x="498" y="350" width="23" height="78"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4545144a-cdb9-4332-b514-c059d819ee94" x="528" y="430" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="77916ce5-393c-44fe-a431-2e39fd8dce70" x="498" y="430" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3ef732ad-a890-43f6-87f3-8f7556088dd5" x="528" y="474" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f727c334-c21a-4a0c-af8e-d4a1867d5c68" x="498" y="474" width="23" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="cec4b9b8-8f09-489d-a277-3004f1deb4e3" mode="Opaque" x="0" y="283" width="555" height="22" forecolor="#CCCCCC" backcolor="#E3E3E3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="dcde3fa9-6053-4528-8e8e-51a04a389988" mode="Opaque" x="0" y="446" width="555" height="24" forecolor="#CCCCCC" backcolor="#E3E3E3"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="8667b3bd-f6d1-4961-a52a-01c2fb30d727" x="0" y="13" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="2" y="0" width="306" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Evaluación de la vía aérea superior MALLAMPATI (marque con una X)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8667b3bd-f6d1-4961-a52a-01c2fb30d727" x="0" y="192" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8667b3bd-f6d1-4961-a52a-01c2fb30d727" x="0" y="205" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="4" y="194" width="175" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5.- CONCLUSIÓN DE LA EVALUACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b5924ed-9d6c-481a-8efc-37b117b5e255" x="533" y="205" width="18" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="066be16b-350c-4627-9d9d-c0c10d3bfb74" x="506" y="205" width="18" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="10" y="206" width="269" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RIESGO ALTO (Criterio A o B positivo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="72" y="222" width="410" height="25"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Excesiva somnolencia (Epworth > 15 o  cabeceo presenciado durante espera).  Incidente por somnolencia o con alta sospecha por somnolencia. (Último año)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="72" y="260" width="410" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Antecedentes de SAS sin control reciente o sin cumplimiento de tratamiento (con CPAP o cirugía)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="72" y="331" width="375" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Historia de higiene de sueño sugiere SAS (ronquidos + pausas respiratorias + Epworth > 10)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="72" y="350" width="376" height="82"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cumple con 2 o más de los siguientes:
+IMC mayor o igual a 30
+Hipertensión Arterial (nueva, no controlada con una sola medicación)
+Circunferencia del cuello "anormal"
+Puntuación de Epworth mayor de 10 y menor de 16
+Antecedente de transtorno del sueño (diagnosticado) sin seguimiento
+Índice de ápnea-hipopnea (AHI) mayor de 5 y menor de 30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="22" y="350" width="50" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criterio D:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="72" y="430" width="376" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Evaluación de vía aérea superior patológico (Mallampati III o IV)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="10" y="474" width="393" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RIESGO BAJO: APTO para conducir vehículos (ningún criterio positivo).]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8667b3bd-f6d1-4961-a52a-01c2fb30d727" x="0" y="470" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="10" y="489" width="329" height="25"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre y Apellidos del Médico - N° de Colegiatura
+Firma y Sello ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="8" y="530" width="151" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Observaciones / recomendaciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd4c5639-ff17-4ec1-a291-54129cf87567" x="400" y="561" width="93" height="13"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Firma y Sello Médico]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="87fbd5c1-c63f-4462-826d-1705e344b0c7" x="378" y="561" width="129" height="1"/>
+			</line>
+			<rectangle>
+				<reportElement uuid="074bc9f1-f85b-4ad8-b428-ae282ddcbdd3" x="0" y="575" width="555" height="58"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a086a678-abcb-4f39-aad6-0ad991afd0f6" x="7" y="580" width="173" height="50"/>
+				<textElement textAlignment="Justified">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Declaro que las respuestas son ciertas según mi leal saber y entender. En caso de ser requeridos, los resultados del examen médico pueden ser revelados, en términos generales, al departamento de salud Ocupacional de la compañia. Los resultados pueden ser enviados a mi médico particular de ser considerado necesario.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cc0c19d4-1a9d-418a-8bd4-ae8a48400087" x="240" y="622" width="17" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[DNI :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="87fbd5c1-c63f-4462-826d-1705e344b0c7" x="183" y="575" width="1" height="58"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="a3212e49-bd44-4bd9-a6f2-d8d09da459ea" x="466" y="622" width="57" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Indice Derecho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0218bff8-2062-4d32-a2f8-b673aadcbe45" x="239" y="612" width="113" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Firma del trabajador o postulante]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="87fbd5c1-c63f-4462-826d-1705e344b0c7" x="418" y="575" width="1" height="58"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7deed89c-031d-40f1-857f-c83fafd8dc41" x="503" y="473" width="13" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkaptobajosi}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f33c3da8-baab-43c9-b392-02aa4fb059b8" x="532" y="472" width="14" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkaptobajono}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8bb5d9e5-cf77-4cc1-bff8-a8bb15800e38" x="11" y="515" width="419" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nombre_user}.concat($F{apellido_user}).concat(" - CMP ").concat($F{cmp_user})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ef16e43c-cd5a-4a04-ac11-12755faeba81" x="260" y="623" width="100" height="9"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_pa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a74624e9-c17e-48a4-b11b-71006d683b4b" x="10" y="543" width="368" height="31"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{txtobservaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c119b1c4-988a-44d6-bd22-009c90241b2c" x="211" y="194" width="337" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* Ampliación: Oximetría, Polisomnografía, Seguimiento de tratamiento Y/O Interconsulto]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2a784d12-06f7-4a1d-97d5-27f8cf72d069" x="528" y="222" width="23" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_psg_noa}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9d2b1ac5-1b0a-423d-8ccd-b6e0e90f8e81" x="498" y="222" width="23" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_psg_sia}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="60ac7643-51dd-4ade-a87c-ed431d5bb886" x="528" y="255" width="23" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_psg_nob}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bb2ac8e0-3bf3-49d8-a50e-03d3aa4fc425" x="500" y="255" width="21" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_psg_sib}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="480f5992-a32b-4cc5-a94a-1bf31e3fdb50" x="532" y="331" width="14" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_no}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="18b39ce0-b129-418e-8184-377daa3db281" x="503" y="331" width="14" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_si}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="50a5d97a-1e09-403f-8851-a772e7eb3215" x="502" y="430" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sie}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="78078f55-a9ee-4316-8c90-0ce76e1f4959" x="532" y="372" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod2}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="069f4b37-9a83-48be-a706-8bcb1d2e40b7" x="532" y="417" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod6}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="05f2ac8f-3194-4e8c-9aa9-6076e37ff444" x="502" y="383" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid3}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a89869ca-8d90-4582-ab93-85f1c909b109" x="532" y="360" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod1}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f56a0a7e-be0e-4fe6-8cea-a50a583fe1a2" x="502" y="372" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid2}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="435645c0-5c07-4d43-affc-7afaeb34698d" x="532" y="405" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod5}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8c08c76f-cc01-4032-8603-04f12976bf5d" x="502" y="417" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid5}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6bca4bc9-1f10-4dc1-9cc7-e735e37738b3" x="502" y="405" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid5}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b6cc5327-4345-4a54-bf92-5aaff990dd65" x="532" y="383" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod3}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1dfe4c53-e908-404d-9c80-0f0839f39b92" x="532" y="430" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_noe}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3e4684c1-b459-45a2-bca0-e6e13b8b45f3" x="532" y="393" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod4}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="92e5b122-938a-40e5-8c24-bf1dc644a1d3" x="502" y="393" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid4}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b34ac59a-7d05-419e-878f-198db767ba7b" x="502" y="360" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid1}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="93a686fb-d3df-413c-a521-2fb61c043a57" x="532" y="349" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_nod}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2833db21-4cde-4bfb-8efc-70c464f3c856" x="502" y="349" width="14" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chk1_apto_sid}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="bdf71945-f910-4d5a-9807-2703aefa0355" x="138" y="95" width="257" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="57256d59-de3c-410c-ae79-2eec4a060818" x="144" y="95" width="57" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado I (     )]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6e22a455-fc66-4b6a-ab7b-e6f7e0a243e2" x="177" y="95" width="15" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkgradoi}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="05c0fbc9-8880-4beb-ae03-2cd33f7f808a" x="202" y="95" width="58" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado II (     )]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dd555fa7-5a75-4887-ab24-19ac707778ca" x="236" y="95" width="15" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkgradoii}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="364b1f25-14bb-4bf5-8deb-6743bc139466" x="267" y="95" width="56" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado III (     )]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f31a766d-a42c-4101-bd85-38d9d1ceda45" x="303" y="95" width="18" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkgradoiii}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5dddd950-8c47-41be-b6c2-f534a1026947" x="331" y="95" width="53" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado IV (     )]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="11ae5293-7890-41e0-8e35-fd740f8f5f21" x="369" y="95" width="15" height="15"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chkgradoiiii}.equals(true) ? "X":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="894b630c-3114-4393-b4b7-7fd3f064f493" x="10" y="283" width="538" height="22"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acción Requerida: En Riesgo Alto, el paciente requiere pruebas ampliatorias (oximetría, PSG o certificación de cumplimiento de tratamiento de apnea del sueño).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6d16e547-7ace-4c63-a654-49275546120f" x="10" y="311" width="538" height="15"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RIESGO MEDIO (Criterio C, D o E positivo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="de04a1ee-7988-41f7-8c42-829dfe4946a4" x="22" y="331" width="100" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criterio C: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="385a2bdf-16d4-42e8-9d54-52c9ea191418" x="22" y="428" width="50" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criterio E:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="028c3e0e-2a7e-47de-9593-0e62d48ff791" x="10" y="446" width="538" height="24"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acción Requerida: En Riesgo Medio, el paciente TIENE 3 MESES de aptitud TEMPORAL. Requiere pruebas ampliatorias (oximetría, PSG o certificación de cumplimiento de tratamiento de apnea del sueño) antes de emitir aptitud por 12 meses.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e171357-9546-4b53-80b9-090734075a3a" x="22" y="259" width="50" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criterio B:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3d9bdd4-14cc-4248-9a19-a1be2b3cfb47" x="22" y="222" width="50" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criterio A:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

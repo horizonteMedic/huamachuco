@@ -79,6 +79,10 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         buttonGroup29 = new javax.swing.ButtonGroup();
         buttonGroup30 = new javax.swing.ButtonGroup();
         buttonGroup31 = new javax.swing.ButtonGroup();
+        buttonGroup32 = new javax.swing.ButtonGroup();
+        buttonGroup33 = new javax.swing.ButtonGroup();
+        buttonGroup34 = new javax.swing.ButtonGroup();
+        buttonGroup35 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNombres = new javax.swing.JTextField();
@@ -140,6 +144,14 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         Chk11no = new javax.swing.JCheckBox();
         Chk10si = new javax.swing.JCheckBox();
         Chk11si = new javax.swing.JCheckBox();
+        jLabel93 = new javax.swing.JLabel();
+        txtComenDetalleAntecedentes = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        checkDiabetsi = new javax.swing.JCheckBox();
+        checkDiabetno = new javax.swing.JCheckBox();
+        jLabel38 = new javax.swing.JLabel();
+        checkinsuRenalsi = new javax.swing.JCheckBox();
+        checkinsuRenalno = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -168,6 +180,9 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         jLabel71 = new javax.swing.JLabel();
         txtMedicinas = new javax.swing.JTextField();
         jLabel72 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        checkSASsi = new javax.swing.JCheckBox();
+        checkSASno = new javax.swing.JCheckBox();
         jPanel7 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
@@ -229,6 +244,9 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         jLabel73 = new javax.swing.JLabel();
         Chk30si = new javax.swing.JCheckBox();
         Chk30no = new javax.swing.JCheckBox();
+        jLabel92 = new javax.swing.JLabel();
+        checkSustpiesi = new javax.swing.JCheckBox();
+        checkSustpieno = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -308,7 +326,6 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         );
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("CERTIFICACION DE SUFICIENCIA MEDICA PARA CONDUCCION DE VEHICULOS ");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -497,235 +514,177 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel14.setText("<html>Todas las enfermedades que produzcan alteración de la consciencia sin importar su causa e independiente de su tratamiento</html>");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 374, -1));
 
         jLabel15.setText("<html>Alcoholismo crónico y en general todas aquellas enfermedades<br> que produzcan incapacidad de efectuar movimientos voluntarios y/o que limiten la capacidad de trabajo como conducción, manejo o control físico de un vehículo motorizado, subir y bajar escaleras, etc.</html>");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 400, -1));
 
         jLabel13.setText("<html>Todas aquellas enfermedades que se caractericen por movimientos involuntarios y que interfieran seriamente su capacidad de trabajar, independiente de su tratamiento farmacológico.</html>");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 390, -1));
 
         jLabel16.setText("<html>Perdida recurrente de la consciencia, independiente de su tratamiento, tales como narcolepsia, epilepsia, etc.</html>");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 341, -1));
 
         jLabel19.setText("<html>Personas que consumen sustancias estupefacientes o psicotrópicas en niveles que alteren su capacidad o trabajar como controlar un vehículo.</html>");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 445, 43));
 
         jLabel20.setText("<html>Personas que como consecuencia de una enfermedad o su tratamiento, sufran uno o varios de los siguientes efectos: alteración del estado de consciencia, alteración del equilibrio, en la percepción, en la habilidad motriz, en la estabilidad emocional y en el juicio.</html>");
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 430, -1));
 
         jLabel22.setText("<html>Síndrome Apnea Obstructiva del sueño. sospecha o confirmada(Ficha sas)</html>");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, -1));
 
         jLabel23.setText("<html>Obesidad (IMC > o igual a 30)</html>");
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, -1, -1));
 
         jLabel24.setText("<html>Anemia de cualquier grado, según criterios OMS 2011.</html>");
+        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, -1));
 
         jLabel21.setText("<html>Personas que consumen sustancias estupefacientes o psicotrópicas en niveles que no alteren su capacidad de trabajar, pero que se encuentran sin tratamiento o en tratamiento sin prescripción médica.</html>");
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 440, -1));
 
         buttonGroup1.add(Chk1no);
+        jPanel3.add(Chk1no, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, 31));
 
         buttonGroup1.add(Chk1si);
+        jPanel3.add(Chk1si, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, 31));
 
         jLabel25.setText("SI");
+        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
         jLabel26.setText("NO");
+        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, -1, -1));
 
         buttonGroup2.add(Chk2si);
+        jPanel3.add(Chk2si, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, 40));
 
         buttonGroup2.add(Chk2no);
+        jPanel3.add(Chk2no, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, -1, 40));
 
         buttonGroup3.add(Chk3no);
+        jPanel3.add(Chk3no, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
         buttonGroup3.add(Chk3si);
+        jPanel3.add(Chk3si, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
 
         buttonGroup4.add(Chk4no);
+        jPanel3.add(Chk4no, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, -1, -1));
 
         buttonGroup4.add(Chk4si);
+        jPanel3.add(Chk4si, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
 
         buttonGroup5.add(Chk5no);
+        jPanel3.add(Chk5no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 210, -1, -1));
 
         buttonGroup5.add(Chk5si);
+        jPanel3.add(Chk5si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 210, -1, -1));
 
         buttonGroup7.add(Chk7no);
+        Chk7no.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Chk7noActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Chk7no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 20, -1, 30));
 
         buttonGroup8.add(Chk8no);
+        jPanel3.add(Chk8no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, -1, 20));
 
         buttonGroup9.add(Chk9no);
+        jPanel3.add(Chk9no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 100, -1, 30));
 
         jLabel27.setText("NO");
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, -1, -1));
 
         buttonGroup8.add(Chk8si);
+        jPanel3.add(Chk8si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 70, -1, 20));
 
         buttonGroup7.add(Chk7si);
+        jPanel3.add(Chk7si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 20, -1, 30));
 
         jLabel28.setText("SI");
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, -1, -1));
 
         buttonGroup10.add(Chk10no);
+        jPanel3.add(Chk10no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 170, -1, -1));
 
         buttonGroup9.add(Chk9si);
+        jPanel3.add(Chk9si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 100, -1, 30));
 
         buttonGroup11.add(Chk11no);
+        jPanel3.add(Chk11no, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 190, -1, -1));
 
         buttonGroup10.add(Chk10si);
+        jPanel3.add(Chk10si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 170, -1, -1));
 
         buttonGroup11.add(Chk11si);
+        jPanel3.add(Chk11si, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 190, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk5si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk5no))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk4si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk4no)))
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(255, 255, 255)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk11si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk11no))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk10si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk10no))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk3si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk3no))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(jLabel25)
-                                    .addComponent(Chk1si))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk1no)
-                                    .addComponent(jLabel26)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(Chk2si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk2no)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(jLabel28)
-                                    .addComponent(Chk7si))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk7no)
-                                    .addComponent(jLabel27)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(Chk9si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Chk9no))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(Chk8si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Chk8no)))))))
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel25)
-                        .addComponent(jLabel26))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel28)
-                        .addComponent(jLabel27)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk1si, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk1no, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk7si, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chk7no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk2si, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk2no, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk8si, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chk8no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk3si)
-                    .addComponent(Chk3no)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk9si, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chk9no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk4si)
-                    .addComponent(Chk4no)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk10si)
-                    .addComponent(Chk10no))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Chk5si)
-                    .addComponent(Chk5no)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk11si)
-                    .addComponent(Chk11no)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63))
-        );
+        jLabel93.setText("Comentarios/Detalle");
+        jPanel3.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, -1));
+        jPanel3.add(txtComenDetalleAntecedentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 370, -1));
+
+        jLabel18.setText("Diabetes mellitus o hipoglicemia no controlada");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        buttonGroup34.add(checkDiabetsi);
+        checkDiabetsi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkDiabetsiActionPerformed(evt);
+            }
+        });
+        jPanel3.add(checkDiabetsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, -1, -1));
+
+        buttonGroup34.add(checkDiabetno);
+        jPanel3.add(checkDiabetno, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, -1, -1));
+
+        jLabel38.setText("Insuficiencia renal crónica grado IV.");
+        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        buttonGroup35.add(checkinsuRenalsi);
+        jPanel3.add(checkinsuRenalsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
+
+        buttonGroup35.add(checkinsuRenalno);
+        checkinsuRenalno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkinsuRenalnoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(checkinsuRenalno, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
 
         Tabla.addTab("Anamnesis", jPanel3);
 
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel31.setText("SI");
+        jPanel4.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 13, -1, -1));
 
         jLabel32.setText("NO");
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 13, -1, -1));
 
         buttonGroup13.add(Chk13si);
+        jPanel4.add(Chk13si, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 43, -1, 31));
 
         buttonGroup13.add(Chk13no);
+        jPanel4.add(Chk13no, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 43, -1, 31));
 
         jLabel33.setText("<html>Hipoacusia con compromiso de frecuencias conversacionales (500, 1000 y 2000 Hz) con promedio mayor de 40 db uni o bilateral incluso con audífonos</html>");
+        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 34, 370, -1));
 
         jLabel34.setText("SI");
+        jPanel4.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, -1, -1));
 
         jLabel35.setText("NO");
+        jPanel4.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, -1));
 
         buttonGroup17.add(Chk17no);
+        jPanel4.add(Chk17no, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 40, -1, 40));
 
         buttonGroup17.add(Chk17si);
+        jPanel4.add(Chk17si, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, -1, 40));
 
         buttonGroup14.add(Chk14si);
         Chk14si.addActionListener(new java.awt.event.ActionListener() {
@@ -733,528 +692,282 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                 Chk14siActionPerformed(evt);
             }
         });
+        jPanel4.add(Chk14si, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 85, -1, 30));
 
         buttonGroup14.add(Chk14no);
+        jPanel4.add(Chk14no, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 85, -1, 30));
 
         jLabel37.setText("<html>Alteración de agudeza visual(de lejos diferente a 20/20 en cada ojo) y/o de la visión de profundidad incluso con lentes correctores.</html>");
+        jPanel4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 370, 30));
 
         buttonGroup18.add(Chk18si);
+        jPanel4.add(Chk18si, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 80, -1, 30));
 
         buttonGroup18.add(Chk18no);
+        Chk18no.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Chk18noActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Chk18no, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 80, -1, 30));
 
         buttonGroup15.add(Chk15si);
+        jPanel4.add(Chk15si, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
 
         buttonGroup15.add(Chk15no);
+        jPanel4.add(Chk15no, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, -1, -1));
 
         jLabel39.setText("<html>No reconocimiento de colores Rojo, Amarillo y Verde</html>");
+        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 50, 348, 20));
 
         buttonGroup19.add(Chk19si);
+        jPanel4.add(Chk19si, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 110, -1, 34));
 
         buttonGroup19.add(Chk19no);
+        jPanel4.add(Chk19no, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 110, -1, 34));
 
         jLabel40.setText("Otros:");
+        jPanel4.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel4.add(txtOtros, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 920, -1));
 
         jLabel41.setText("Prueba de vision de profundidad alterada");
+        jPanel4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 349, -1));
 
         jLabel42.setText("<html>Campimetría Anormal (Test de confrontación alterada)</html>");
+        jPanel4.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 348, -1));
 
         jLabel46.setText("<html>Alguno de los parámetros de la evaluación psicosensométrica alterada: test de palanca,<br> punteo o Reactimetria Alterado</html>");
+        jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
 
         jLabel71.setText("Detalle las medicinas que están tomando:");
+        jPanel4.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 240, -1));
+        jPanel4.add(txtMedicinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 730, -1));
 
         jLabel72.setText("5.- OTROS DATOS DE RELEVANCIA");
+        jPanel4.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 348, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)))
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(Chk15si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk15no))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(jLabel31)
-                                    .addComponent(Chk13si))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk13no)
-                                    .addComponent(jLabel32)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(Chk14si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Chk14no)))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(jLabel34)
-                                    .addComponent(Chk17si))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk17no)
-                                    .addComponent(jLabel35)))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(Chk19si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Chk19no))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(Chk18si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Chk18no)))))
-                        .addGap(22, 22, 22))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel40)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtOtros)
-                        .addContainerGap())
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel71)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtMedicinas))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel31)
-                        .addComponent(jLabel32))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel34)
-                        .addComponent(jLabel35)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Chk13si, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk13no, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk17no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk17si, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Chk14no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chk18no, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk18si, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(Chk14si, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel41)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Chk15si)
-                    .addComponent(Chk15no)
-                    .addComponent(Chk19si, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chk19no, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel72)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel71)
-                    .addComponent(txtMedicinas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel40)
-                    .addComponent(txtOtros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
-        );
+        jLabel91.setText("Test de SAS: Anormal");
+        jPanel4.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        buttonGroup33.add(checkSASsi);
+        checkSASsi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkSASsiActionPerformed(evt);
+            }
+        });
+        jPanel4.add(checkSASsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, -1, -1));
+
+        buttonGroup33.add(checkSASno);
+        checkSASno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkSASnoActionPerformed(evt);
+            }
+        });
+        jPanel4.add(checkSASno, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, -1, -1));
 
         Tabla.addTab("Pruebas complementarias", jPanel4);
 
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel45.setText("NO");
+        jPanel7.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(787, 69, -1, -1));
 
         jLabel47.setText("<html>Presencia de nistagmus</html>");
+        jPanel7.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 92, 144, -1));
 
         jLabel48.setText("SI");
+        jPanel7.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(771, 69, -1, -1));
 
         jLabel50.setText("<html>Limitación en fuerza y/o movilidad de extremidades (Mayor a 5Kg / fuerza cada mano)</html>");
+        jPanel7.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, -1, -1));
 
         jLabel51.setText("SI");
+        jPanel7.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 69, -1, -1));
 
         jLabel52.setText("NO");
+        jPanel7.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 69, -1, -1));
 
         buttonGroup21.add(Chk21si);
+        jPanel7.add(Chk21si, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 91, -1, 19));
 
         buttonGroup21.add(Chk21no);
+        jPanel7.add(Chk21no, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 91, -1, 19));
 
         jLabel55.setText("FC ");
+        jPanel7.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         txtfc.setEditable(false);
         txtfc.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtfc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 53, -1));
 
         buttonGroup25.add(Chk25no);
+        jPanel7.add(Chk25no, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 91, -1, 19));
 
         buttonGroup25.add(Chk25si);
+        jPanel7.add(Chk25si, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 91, -1, 19));
 
         jLabel53.setText("Alteración presente del equilibrio. (Romberg)");
+        jPanel7.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, -1, -1));
 
         buttonGroup22.add(Chk22si);
+        jPanel7.add(Chk22si, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 114, -1, 19));
 
         buttonGroup22.add(Chk22no);
+        jPanel7.add(Chk22no, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 114, -1, 19));
 
         jLabel49.setText("Anormalidad en movimientos oculares");
+        jPanel7.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 115, -1, -1));
 
         buttonGroup26.add(Chk26si);
+        jPanel7.add(Chk26si, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 114, -1, 19));
 
         buttonGroup26.add(Chk26no);
+        jPanel7.add(Chk26no, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 114, -1, 19));
 
         jLabel54.setText("Anormalidad en la marcha con ojos cerrados.");
+        jPanel7.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 138, -1, -1));
 
         buttonGroup23.add(Chk23si);
+        jPanel7.add(Chk23si, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 137, -1, 19));
 
         buttonGroup23.add(Chk23no);
+        jPanel7.add(Chk23no, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 137, -1, 19));
 
         jLabel56.setText("Pupilas no CIRLA");
+        jPanel7.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 138, 187, -1));
 
         buttonGroup27.add(Chk27si);
+        jPanel7.add(Chk27si, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 137, -1, 19));
 
         buttonGroup27.add(Chk27no);
+        jPanel7.add(Chk27no, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 137, -1, 19));
 
         jLabel57.setText("Alteración de la coordinación (dedo índice nariz)");
+        jPanel7.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 161, -1, -1));
 
         buttonGroup24.add(Chk24si);
+        jPanel7.add(Chk24si, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 160, -1, 19));
 
         buttonGroup24.add(Chk24no);
+        jPanel7.add(Chk24no, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 160, -1, 19));
 
         jLabel58.setText("Anormalidad del lenguaje");
+        jPanel7.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 161, 187, -1));
 
         buttonGroup28.add(Chk28si);
+        jPanel7.add(Chk28si, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 160, -1, 19));
 
         buttonGroup28.add(Chk28no);
+        jPanel7.add(Chk28no, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 160, -1, 19));
 
         jLabel59.setText("Movimientos involuntarios");
+        jPanel7.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 184, 187, -1));
 
         buttonGroup29.add(Chk29si);
+        jPanel7.add(Chk29si, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 183, -1, 19));
 
         buttonGroup29.add(Chk29no);
+        jPanel7.add(Chk29no, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 183, -1, 19));
 
         jLabel60.setText("FR");
+        jPanel7.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
         txtfr.setEditable(false);
         txtfr.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtfr, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 53, -1));
 
         jLabel61.setText("PA");
+        jPanel7.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
         txtpa.setEditable(false);
         txtpa.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 53, -1));
 
         jLabel62.setText("TALLA");
+        jPanel7.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         txtTalla.setEditable(false);
         txtTalla.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtTalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 53, -1));
 
         jLabel63.setText("PESO");
+        jPanel7.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
         txtPeso.setEditable(false);
         txtPeso.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 53, -1));
 
         jLabel64.setText("IMC");
+        jPanel7.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
 
         txtimc.setEditable(false);
         txtimc.setBackground(new java.awt.Color(153, 204, 255));
         txtimc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel7.add(txtimc, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 53, -1));
 
         jLabel65.setText("Perímetro Cuello ");
+        jPanel7.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
 
         txtperimetrocuello.setEditable(false);
         txtperimetrocuello.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtperimetrocuello, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 53, -1));
 
         jLabel66.setText("Perímetro de cintura");
+        jPanel7.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, -1));
 
         txtperimetrocintura.setEditable(false);
         txtperimetrocintura.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtperimetrocintura, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 53, -1));
 
         jLabel67.setText("Perímetro de Cadera");
+        jPanel7.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 45, -1, -1));
 
         txtperimetrodecadera.setEditable(false);
         txtperimetrodecadera.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtperimetrodecadera, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 42, 53, -1));
 
         jLabel68.setText("ICC");
+        jPanel7.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 45, -1, -1));
 
         txticc.setEditable(false);
         txticc.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txticc, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 42, 53, -1));
 
         jLabel44.setText("Detalle información:");
+        jPanel7.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel7.add(txtInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 690, -1));
 
         jLabel69.setText("P. Torácico Inspiración");
+        jPanel7.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 45, -1, -1));
 
         txtPtoracicoI.setEditable(false);
         txtPtoracicoI.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtPtoracicoI, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 42, 53, -1));
 
         txtPtoracicoE.setEditable(false);
         txtPtoracicoE.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.add(txtPtoracicoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 42, 53, -1));
 
         jLabel70.setText("P. Torácico Espiración");
+        jPanel7.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 45, -1, -1));
 
         jLabel73.setText("Asimetría facial");
+        jPanel7.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 184, -1, -1));
 
         buttonGroup31.add(Chk30si);
+        jPanel7.add(Chk30si, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 180, -1, 19));
 
         buttonGroup31.add(Chk30no);
+        jPanel7.add(Chk30no, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 180, -1, 19));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk21si)
-                                    .addComponent(jLabel51))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk21no)
-                                    .addComponent(jLabel52)))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel53)
-                                .addGap(215, 215, 215)
-                                .addComponent(Chk22si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk22no))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel54)
-                                .addGap(215, 215, 215)
-                                .addComponent(Chk23si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk23no))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel57)
-                                    .addComponent(jLabel73))
-                                .addGap(202, 202, 202)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(Chk30si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Chk30no))
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(Chk24si)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Chk24no)))))
-                        .addGap(58, 58, 58)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
-                                .addComponent(Chk28si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk28no))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Chk27si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk27no))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Chk26si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk26no))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk25si)
-                                    .addComponent(jLabel48))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(Chk25no)
-                                    .addComponent(jLabel45)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Chk29si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Chk29no)))
-                        .addGap(86, 86, 86))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel67)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtperimetrodecadera, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel68)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txticc, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel69)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPtoracicoI, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel70)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPtoracicoE, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel44)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtInformacion)
-                .addContainerGap())
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel55)
-                .addGap(4, 4, 4)
-                .addComponent(txtfc, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel60)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfr, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel61)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtpa, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel62)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtTalla, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel63)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel64)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtimc, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel65)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtperimetrocuello, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel66)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtperimetrocintura, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel55))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtfc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel60)
-                        .addComponent(txtfr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel61)
-                        .addComponent(txtpa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel62)
-                        .addComponent(txtTalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel63)
-                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel64)
-                        .addComponent(txtimc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel65)
-                        .addComponent(txtperimetrocuello, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel66)
-                        .addComponent(txtperimetrocintura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel70)
-                        .addComponent(txtPtoracicoE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel69)
-                        .addComponent(txtPtoracicoI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel68)
-                        .addComponent(txticc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel67)
-                        .addComponent(txtperimetrodecadera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(5, 5, 5)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel51)
-                    .addComponent(jLabel52)
-                    .addComponent(jLabel48)
-                    .addComponent(jLabel45))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk21si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk21no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk25si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk25no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel53)
-                    .addComponent(Chk22si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk22no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49)
-                    .addComponent(Chk26si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk26no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel54)
-                    .addComponent(Chk23si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk23no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel56)
-                    .addComponent(Chk27si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk27no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel57)
-                    .addComponent(Chk24si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk24no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel58)
-                    .addComponent(Chk28si, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk28no, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Chk30si, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk30no, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk29no, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Chk29si, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
-                    .addComponent(txtInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
-        );
+        jLabel92.setText("Sustentacion en 1 pie > 15° ");
+        jPanel7.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 204, -1, -1));
+
+        buttonGroup32.add(checkSustpiesi);
+        jPanel7.add(checkSustpiesi, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 199, -1, -1));
+
+        buttonGroup32.add(checkSustpieno);
+        jPanel7.add(checkSustpieno, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 199, -1, -1));
 
         Tabla.addTab("Examen Fisico", jPanel7);
 
@@ -1747,40 +1460,45 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Tabla, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel89)
-                    .addComponent(txtfc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel90)
-                    .addComponent(txtfr1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel86)
-                    .addComponent(txtpa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel85)
-                    .addComponent(txtTalla1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel87)
-                    .addComponent(txtPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel88)
-                    .addComponent(txtimc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Tabla, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel89)
+                            .addComponent(txtfc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel90)
+                            .addComponent(txtfr1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel86)
+                            .addComponent(txtpa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel85)
+                            .addComponent(txtTalla1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel87)
+                            .addComponent(txtPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel88)
+                            .addComponent(txtimc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12))))
         );
 
         pack();
@@ -1986,6 +1704,11 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
 "       t.chk_28_si, t.chk_28_no, t.chk_29_si, t.chk_29_no, t.f_desde, t.f_hasta, \n" +
 "       t.chk_si, t.chk_no, t.chk_observado,t.b_c_observaciones, t.d_medicina, \n" +
 "       t.d_informacion, t.chk_apto_r, t.txtotros, t.chk_30_si, \n" +
+              "t.diabete_mellitus, " +
+  "t.insuficiencia_renalIV, " +
+  "t.testSAS, " +
+  "t.sustentacionpie, " +
+  "t.comenDetalleAntecedentes, " +
 "       t.chk_30_no, c.talla, c.peso, "
 + "c.imc, c.cintura, c.icc, c.cadera, c.temperatura, c.f_cardiaca, c.sat_02, c.perimetro_cuello, "
 + "c.sistolica, c.diastolica, c.f_respiratoria\n" +
@@ -2064,6 +1787,12 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                         Chk29no.setSelected(oConn.setResult.getBoolean("chk_29_no"));
                         Chk30si.setSelected(oConn.setResult.getBoolean("chk_30_si"));
                         Chk30no.setSelected(oConn.setResult.getBoolean("chk_30_no"));
+                         checkDiabetsi.setSelected(oConn.setResult.getBoolean("diabete_mellitus"));
+                        checkinsuRenalsi.setSelected(oConn.setResult.getBoolean("insuficiencia_renalIV"));
+                        checkSASsi.setSelected(oConn.setResult.getBoolean("testSAS"));
+                        checkSustpiesi.setSelected(oConn.setResult.getBoolean("sustentacionpie"));
+                        txtComenDetalleAntecedentes.setText(  oConn.setResult.getString("comenDetalleAntecedentes"));
+                     
                         FechaDesde.setDate(oConn.setResult.getDate("f_desde"));
                         FechaHasta.setDate(oConn.setResult.getDate("f_hasta"));
                         chksi.setSelected(oConn.setResult.getBoolean("chk_si"));
@@ -2124,8 +1853,32 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_FechaDesdePropertyChange
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-        cerrarVentana();// TODO add your handling code here:
+       // cerrarVentana();// TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
+
+    private void checkinsuRenalnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkinsuRenalnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkinsuRenalnoActionPerformed
+
+    private void checkSASnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkSASnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkSASnoActionPerformed
+
+    private void checkSASsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkSASsiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkSASsiActionPerformed
+
+    private void Chk18noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Chk18noActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Chk18noActionPerformed
+
+    private void Chk7noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Chk7noActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Chk7noActionPerformed
+
+    private void checkDiabetsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDiabetsiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkDiabetsiActionPerformed
     private boolean imprimir() {
         boolean im = false;
         int seleccion = JOptionPane.showOptionDialog(
@@ -2152,9 +1905,19 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                  Map parameters = new HashMap(); 
                 parameters.put("Norden",cod);      
                     try 
-                {                     
-                    String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"certificaciondeconduccion.jasper";
-                    JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
+                {          
+                    
+                    
+                     String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") + File.separator + "reportes" + File.separator + "certificaciondeconduccion_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") + File.separator + "reportes" + File.separator + "certificaciondeconduccion.jasper";
+    
+            
+                    
+                    JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(master);
                     JasperPrint jasperPrint= JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);
                     JasperViewer.viewReport(jasperPrint, false);
                   JasperPrintManager.printReport(jasperPrint,true);
@@ -2169,8 +1932,15 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         parameters.put("Norden", cod);
 
         try {
-            String direccionReporte = System.getProperty("user.dir") + File.separator + "reportes" + File.separator + "certificaciondeconduccion.jasper";
-            JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
+            String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") + File.separator + "reportes" + File.separator + "certificaciondeconduccion_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") + File.separator + "reportes" + File.separator + "certificaciondeconduccion.jasper";
+    
+            
+            JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(master);
             JasperPrint myPrint = JasperFillManager.fillReport(myReport, parameters, clsConnection.oConnection);
             JasperViewer viewer = new JasperViewer(myPrint, false);
             viewer.setTitle("Certificación Conducción");
@@ -2942,7 +2712,16 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
               {strSqlStmt += ",d_informacion";Query += ",'"+txtInformacion.getText().toString()+ "'";}  
               if (!txtOtros.getText().isEmpty() )
               {strSqlStmt += ",txtotros";Query += ",'"+txtOtros.getText().toString()+ "'";}
+              
+              strSqlStmt += ",diabete_mellitus";     Query += ",'"+ checkDiabetsi.isSelected() +"'";
+                strSqlStmt += ",insuficiencia_renalIV"; Query += ",'"+ checkinsuRenalsi.isSelected() +"'";
+                strSqlStmt += ",testSAS";               Query += ",'"+ checkSASsi.isSelected() +"'";
+                strSqlStmt += ",sustentacionpie";       Query += ",'"+ checkSustpiesi.isSelected() +"'";
+          
+               strSqlStmt += ",comenDetalleAntecedentes"; Query      += ",'" + txtComenDetalleAntecedentes.getText().trim() + "'";
+           
               strSqlStmt += ",dni_user";Query += ",'"+ clsGlobales.sDniOperador + "'";
+              
               if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt.concat(") ") + Query.concat(")"))){
 
              imprimir();
@@ -3098,6 +2877,17 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
               {Query += ",d_informacion='"+txtInformacion.getText().toString()+ "'";} 
               if (!txtOtros.getText().isEmpty() )
               {Query += ",txtotros='"+txtOtros.getText().toString()+ "'";}
+              
+                              
+              Query += ",diabete_mellitus='" + checkDiabetsi.isSelected() + "'";
+                Query += ",insuficiencia_renalIV='" + checkinsuRenalsi.isSelected() + "'";
+                Query += ",testSAS='" + checkSASsi.isSelected() + "'";
+                Query += ",sustentacionpie='" + checkSustpiesi.isSelected() + "'";
+                if (!txtComenDetalleAntecedentes.getText().trim().isEmpty()) {
+                    Query += ",comenDetalleAntecedentes='" 
+                          + txtComenDetalleAntecedentes.getText().trim() 
+                          + "'";
+              
               Query += ",dni_user='"+ clsGlobales.sDniOperador + "'"
                       + " where n_orden='"+txtNorden.getText().toString()+ "'";
 //             oFunc.SubSistemaMensajeError(strSqlStmt+Query);
@@ -3122,6 +2912,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(B_Certificacion_conduccion.class.getName()).log(Level.SEVERE, null, ex);
         }
+     }
  }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox Chk10no;
@@ -3213,12 +3004,24 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup30;
     private javax.swing.ButtonGroup buttonGroup31;
+    private javax.swing.ButtonGroup buttonGroup32;
+    private javax.swing.ButtonGroup buttonGroup33;
+    private javax.swing.ButtonGroup buttonGroup34;
+    private javax.swing.ButtonGroup buttonGroup35;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.JCheckBox checkDiabetno;
+    private javax.swing.JCheckBox checkDiabetsi;
+    private javax.swing.JCheckBox checkSASno;
+    private javax.swing.JCheckBox checkSASsi;
+    private javax.swing.JCheckBox checkSustpieno;
+    private javax.swing.JCheckBox checkSustpiesi;
+    private javax.swing.JCheckBox checkinsuRenalno;
+    private javax.swing.JCheckBox checkinsuRenalsi;
     private javax.swing.JCheckBox chkActitud;
     private javax.swing.JCheckBox chkAptoRestriccion;
     private javax.swing.JCheckBox chkNoApto;
@@ -3241,6 +3044,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -3262,6 +3066,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
@@ -3320,6 +3125,9 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -3335,6 +3143,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtCercaCorregidaOI;
     private javax.swing.JTextField txtCercaSinCorregirOD;
     private javax.swing.JTextField txtCercaSinCorregirOI;
+    private javax.swing.JTextField txtComenDetalleAntecedentes;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEnfermedadesOculares;
     private javax.swing.JTextField txtImp;

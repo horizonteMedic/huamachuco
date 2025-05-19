@@ -679,6 +679,27 @@ public boolean sConsultas(String tabla , String campo, String nro){
 
 }
 
+public Boolean validarEmpresaBoro(String norden){
+    Boolean result=false;
+    String sql="SELECT TRIM(UPPER(RAZON_EMPRESA)) AS razon_empresa FROM N_ORDEN_OCUPACIONAL  as n where n.n_orden="+norden;
+    String empresa = "";
+    oConn.FnBoolQueryExecute(sql);
+    try {
+        if(oConn.setResult.next()){
+            empresa = oConn.setResult.getString("razon_empresa");
+                            System.out.println(empresa);
+
+            if(empresa.contains("MINERA BOROO MISQUICHILCA S.A."))
+            result=true;
+            else
+            result=false;
+         }
+        
+    } catch (Exception e) {
+    }
+    return result;
+    }  
+
 
 
 }

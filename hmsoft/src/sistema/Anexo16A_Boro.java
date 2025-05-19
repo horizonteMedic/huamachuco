@@ -272,7 +272,6 @@ public final class Anexo16A_Boro extends javax.swing.JInternalFrame {
         );
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Anexo N° 16-A");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -318,7 +317,7 @@ public final class Anexo16A_Boro extends javax.swing.JInternalFrame {
 
         txtEdad.setEditable(false);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null), "Funciones Vitales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), java.awt.Color.blue)); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null), "Funciones Vitales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), java.awt.Color.blue)); // NOI18N
 
         jLabel2.setText("F.C :");
 
@@ -1197,7 +1196,7 @@ public final class Anexo16A_Boro extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel75)
                                     .addComponent(jLabel74))
                                 .addGap(48, 48, 48)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)))
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtVisionBinocular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel48))
@@ -1506,7 +1505,9 @@ public final class Anexo16A_Boro extends javax.swing.JInternalFrame {
                 + "INNER JOIN lab_clinico as l ON (n_orden_ocupacional.n_orden = l.n_orden) "
                 + "LEFT JOIN informe_electrocardiograma as i ON (n_orden_ocupacional.n_orden = i.n_orden) "
                 + "where triaje.n_orden ='"+txtNorden.getText()+"'";
+                    System.out.print(Sql);
                 oConn.FnBoolQueryExecute(Sql);
+                
                 try {
                     if (oConn.setResult.next()) {
 
@@ -1863,7 +1864,7 @@ public final class Anexo16A_Boro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_no12ActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-        cerrarVentana();        // TODO add your handling code here:
+       // cerrarVentana();        // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
 public void direccion(){
@@ -2140,11 +2141,12 @@ private void print(Integer cod){
   //Integer n;
                //n = Integer.parseInt(txtNorden.getText());
                 //Pasamos parametros al reporte Jasper. 
-              Map parameters = new HashMap();
+        Map parameters = new HashMap();
         // Coloco los valores en los parámetros
         parameters.put("Norden", cod);
 
-        try {
+        try {            
+            
             String master = System.getProperty("user.dir")+ "/reportes/Anexo16ABoro.jasper";
             System.out.println("master" + master);
             if (master == null) {

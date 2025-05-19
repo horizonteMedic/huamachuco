@@ -42,6 +42,7 @@ public class Ocupacional extends javax.swing.JFrame {
     InformePsicologico ips;
     FichaMedica fm;
     ConsentimientoInformado coi;
+    Consentimientos cboro;
 //    Anexo7C a7c;
     FichaOftalmologica fo;
     ElectroCardiograma el;
@@ -347,6 +348,7 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
         mParasitologia = new javax.swing.JMenuItem();
         mResultadosPanel5D = new javax.swing.JMenuItem();
         mPerfilHepatico = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
         bPanel3D = new javax.swing.JMenuItem();
         bPanel10D = new javax.swing.JMenuItem();
         TestAlturaPsiconsensometria = new javax.swing.JMenuItem();
@@ -1496,6 +1498,15 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
             }
         });
         FrmAnalisisClinicos2024.add(mPerfilHepatico);
+
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pildora.png"))); // NOI18N
+        jMenuItem15.setText("Consentimiento Boro");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        FrmAnalisisClinicos2024.add(jMenuItem15);
 
         bPanel3D.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/doc.png"))); // NOI18N
         bPanel3D.setText("Panel3D");
@@ -3420,6 +3431,21 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
             //  JOptionPane.showMessageDialog(this,"Error: La ventana ya esta abierta...");
         }
     }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+         if(estacerrado(cboro)){
+            cboro =new Consentimientos();
+            btnCertificadoFisicoM.add(cboro);
+            ImageIcon ticon = new ImageIcon(ClassLoader.getSystemResource("imagenes/enfermera.png"));
+            cboro.setFrameIcon(ticon);
+            cboro.setLocation(centradoXY(cboro));
+            cboro.show();
+            //fn.setVisible(true); viviana
+        }else{
+            cboro.moveToFront();
+            //  JOptionPane.showMessageDialog(this,"Error: La ventana ya esta abierta...");
+        }
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
 @Override
      public Image getIconImage() {
     Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/med.png"));
@@ -3562,6 +3588,7 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

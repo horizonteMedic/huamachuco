@@ -2752,7 +2752,12 @@ int seleccion = JOptionPane.showOptionDialog(
                 parameters.put("Norden",cod);      
                     try 
                 {    
+                                    
                     String direccionReporte;
+                      if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                          direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"OIT_boro.jasper";
+                          
+                      } else 
                     if(chkSinDatos.isSelected()){
                        direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"OIT_B.jasper"; 
                     }else{
@@ -2774,11 +2779,16 @@ int seleccion = JOptionPane.showOptionDialog(
                   try 
                 {
                     String direccionReporte;
+                      if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                          direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"OIT_boro.jasper";
+                          
+                      } else 
                     if(chkSinDatos.isSelected()){
                         direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"OIT_B.jasper";
                     }else{
                         direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"OIT.jasper";
                     }
+                    
                     
                     JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
                     JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);

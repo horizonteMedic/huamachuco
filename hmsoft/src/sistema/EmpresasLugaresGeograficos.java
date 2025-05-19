@@ -2216,7 +2216,7 @@ void limpiar2(){
     }//GEN-LAST:event_txtActividadActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-        cerrarVentana();        // TODO add your handling code here:
+       // cerrarVentana();        // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
     private void numeros(java.awt.event.KeyEvent evt){
        int k=(int)evt.getKeyChar();
@@ -2728,11 +2728,15 @@ FechaHistoria.setDate(fechaDate);
 private void printer(Integer cod){
                  Map parameters = new HashMap(); 
                 parameters.put("id",cod);      
-                 try 
-                {
-                    String master = System.getProperty("user.dir") +
-                                "/reportes/HistoriaOcupacional.jasper";
-            
+                 try {
+                    String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") + "/reportes/HistoriaOcupacional_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") + "/reportes/HistoriaOcupacional.jasper";
+    
+                   
             System.out.println("master" + master);
             if (master == null) 
             {                
@@ -2774,8 +2778,13 @@ private void print(Integer cod){
 
                 try 
                 {
-                    String master = System.getProperty("user.dir") +
-                                "/reportes/HistoriaOcupacional.jasper";
+                    String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") + "/reportes/HistoriaOcupacional_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") + "/reportes/HistoriaOcupacional.jasper";
+    
             
             System.out.println("master" + master);
             if (master == null) 

@@ -414,6 +414,11 @@
         </MenuItem>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JMenuItem" name="jMenuItem19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenuItem19"/>
+      </Properties>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="MenuOcupacional">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -891,6 +896,87 @@
             <Property name="text" type="java.lang.String" value="COVID-19"/>
           </Properties>
           <SubComponents>
+            <Menu class="javax.swing.JMenu" name="mExamenMarsa">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/add.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="COVID -MARSA"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="mConstanciaSaludMarsa">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="1. Constancia Salud"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConstanciaSaludMarsaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="mFichaMedicaMarsa1">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="2. Ficha M&#xe9;dica"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mFichaMedicaMarsa1ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="mFichaResultadoPrueba">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="3. Ficha Resutados Prueba"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mFichaResultadoPruebaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="mConstanciaAltaMarsa">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="4. Constancia Alta"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConstanciaAltaMarsaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="mConsentimientoInformadoCovid">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="5. Consentimiento Informado Covid"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConsentimientoInformadoCovidActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/pildora.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="6. Certificado Medico"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
             <MenuItem class="javax.swing.JMenuItem" name="mConstanciaTamizaje">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -918,7 +1004,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mRegistroPrueba">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/maletin.png"/>
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Registro prueba r&#xe1;pidas"/>
                 <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
@@ -930,7 +1016,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mConstanciaMedicaCovid19">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/historia.png"/>
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Constancia M&#xe9;dica "/>
                 <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
@@ -942,7 +1028,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mCartaCompromisoAislamiento">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/casco.png"/>
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Carta Compromiso"/>
                 <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
@@ -1025,6 +1111,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="LLENAR PRUEBAS MOLECULARES"/>
               </Properties>
               <Events>
@@ -1033,83 +1122,108 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="mExamenMarsa">
+        <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/add.png"/>
+              <Image iconType="3" name="/imagenes/pildora.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="COVID -MARSA"/>
+            <Property name="text" type="java.lang.String" value="Formatos Boro"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="mConstanciaSaludMarsa">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="1. Constancia Salud"/>
-                <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Constancia Brigadista"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConstanciaSaludMarsaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem13ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mFichaMedicaMarsa1">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="2. Ficha M&#xe9;dica"/>
-                <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Constancia Entrega "/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mFichaMedicaMarsa1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem14ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mFichaResultadoPrueba">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="3. Ficha Resutados Prueba"/>
-                <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Ficha SAS"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mFichaResultadoPruebaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem15ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mConstanciaAltaMarsa">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="4. Constancia Alta"/>
-                <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Antecedentes Altura"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConstanciaAltaMarsaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem16ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mConsentimientoInformadoCovid">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="5. Consentimiento Informado Covid"/>
-                <Property name="actionCommand" type="java.lang.String" value="Cert. Conducci&#xf3;n de Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Antecedentes Patologicos"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mConsentimientoInformadoCovidActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem17ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/pildora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="6. Certificado Medico"/>
+                <Property name="text" type="java.lang.String" value="Anexo 16A Boro"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem18ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Audiometria Boro"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem20ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ev. Musculo Esqueletica"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem21ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="OIT "/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem22ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem23">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Certificado Conducci&#xf3;n"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem23ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem24">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Certificado Altura"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem24ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Anexo 16"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem25ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -1192,6 +1306,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Constancia tamizaje"/>
               </Properties>
               <Events>
@@ -1200,6 +1317,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/pildora.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="LABORATORIO COVID"/>
               </Properties>
               <Events>

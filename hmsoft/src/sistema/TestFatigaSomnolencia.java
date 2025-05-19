@@ -161,7 +161,6 @@ public class TestFatigaSomnolencia extends javax.swing.JInternalFrame {
         );
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("TEST DE FATIGA Y SOMNOLENCIA");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -325,7 +324,7 @@ public class TestFatigaSomnolencia extends javax.swing.JInternalFrame {
         );
 
         jPanel16.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "SITUACIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "SITUACIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel44.setText("1. Sentado leyendo ");
 
@@ -803,16 +802,22 @@ public class TestFatigaSomnolencia extends javax.swing.JInternalFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 7, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         Tabla.addTab("Examen ", jPanel4);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "GRABAR/ACTUALIZAR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "GRABAR/ACTUALIZAR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel29.setText("Nombre y Apellidos del Médico – N° de Colegiatura :");
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Imprimir"));
+
+        txtImp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtImpActionPerformed(evt);
+            }
+        });
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/impresora.png"))); // NOI18N
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -1069,7 +1074,7 @@ public class TestFatigaSomnolencia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtNordenActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-       cerrarVentana();  // TODO add your handling code here:
+      // cerrarVentana();  // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
     private void rbS3AltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbS3AltaActionPerformed
@@ -1099,6 +1104,10 @@ public class TestFatigaSomnolencia extends javax.swing.JInternalFrame {
     private void rbS9AltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbS9AltaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rbS9AltaActionPerformed
+
+    private void txtImpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtImpActionPerformed
     
      
     private void Agregar(){
@@ -1234,8 +1243,16 @@ private void printer1(Integer cod){
     Map parameters = new HashMap(); 
     parameters.put("Norden",cod);      
         try {
-            String master = System.getProperty("user.dir") +
-                                "/reportes/TestFatigaSomnolenia.jasper";
+            
+             String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") + "/reportes/TestFatigaSomnolenia_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") + "/reportes/TestFatigaSomnolenia.jasper";
+    
+            
+            
             
             System.out.println("master" + master);
             if (master == null) {                
@@ -1265,7 +1282,7 @@ private void printer1(Integer cod){
             }
  }
 
-    private void limpiar(){
+private void limpiar(){
         txtNorden.setText(null);
         txtNombres.setText(null);
         txtdni.setText(null);
@@ -1307,10 +1324,8 @@ private void printer1(Integer cod){
         
     }
       
-   public void chk(){
-       
-       
-      
+public void chk(){
+   
    }
    
    public void cerrarVentana(){

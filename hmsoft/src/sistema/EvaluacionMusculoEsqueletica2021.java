@@ -8,6 +8,7 @@ import Clases.clsConnection;
 import Clases.clsFunciones;
 import Clases.clsGlobales;
 import Clases.clsOperacionesUsuarios;
+import java.io.File;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -580,7 +581,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         jPanel15.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "APTITUD ESPALDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "APTITUD ESPALDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel33.setText("Flex/fuerza Abdomen");
 
@@ -692,7 +693,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         jPanel16.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "RANGOS ARTICULARES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "RANGOS ARTICULARES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel35.setText("Abducción de hombro(0°-180°)");
 
@@ -893,7 +894,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         Tabla.addTab("Examen parte I", jPanel3);
 
         jPanel17.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "COLUMNA VERTEBRAL:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "COLUMNA VERTEBRAL:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel41.setText("Desviación del Eje ");
 
@@ -1036,7 +1037,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
                                     .addComponent(txtCVTest)
                                     .addComponent(txtCVDandy)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addGap(0, 5, Short.MAX_VALUE)
                                         .addComponent(txtCVLasegue, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtCVDesviacion, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(jPanel17Layout.createSequentialGroup()
@@ -1086,10 +1087,8 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
                         .addGap(0, 0, 0)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtCVLasegue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0))
+                            .addComponent(txtCVLasegue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbCVDesviacion_si, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rbCVDesviacion_no, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1120,7 +1119,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         jPanel18.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jPanel11.setBackground(new java.awt.Color(153, 204, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TEST DE JOBE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(0, 0, 255))); // NOI18N
@@ -1270,7 +1269,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         jPanel40.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jPanel12.setBackground(new java.awt.Color(153, 204, 255));
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TES DE GERBER ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(0, 0, 255))); // NOI18N
@@ -1671,9 +1670,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
                             .addGroup(jPanel40Layout.createSequentialGroup()
                                 .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(jPanel40Layout.createSequentialGroup()
-                                .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)))
+                            .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -1707,7 +1704,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
                     .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1724,7 +1721,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         Tabla.addTab("Examen parte II", jPanel4);
 
         jPanel22.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "MANIOBRAS DE DESCARTE DE D.M.E. DE MM.SS. ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jPanel37.setBackground(new java.awt.Color(153, 204, 255));
         jPanel37.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TINNEL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(0, 0, 255))); // NOI18N
@@ -1879,7 +1876,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         jPanel44.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel44.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EVAL. DINÁMICA DE ARTICULACIONES ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel44.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EVAL. DINÁMICA DE ARTICULACIONES ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jPanel45.setBackground(new java.awt.Color(153, 204, 255));
         jPanel45.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cadera derecha ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(0, 0, 255))); // NOI18N
@@ -2356,7 +2353,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         Tabla.addTab("Examen parte III", jPanel7);
 
         jPanel24.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EVAL. DINÁMICA DE ARTICULACIONES ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EVAL. DINÁMICA DE ARTICULACIONES ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jPanel26.setBackground(new java.awt.Color(153, 204, 255));
         jPanel26.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tobillo izquierdo  ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(0, 0, 255))); // NOI18N
@@ -2582,11 +2579,17 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
 
         Tabla.addTab("Examen parte IV", jPanel24);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CONCLUSIONES Y RECOMENDACIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CONCLUSIONES Y RECOMENDACIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         jLabel29.setText("Nombre y Apellidos del Médico – N° de Colegiatura :");
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Imprimir"));
+
+        txtImp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtImpActionPerformed(evt);
+            }
+        });
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/impresora.png"))); // NOI18N
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -2629,7 +2632,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         });
 
         jPanel20.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CONCLUSIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CONCLUSIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         txtConclusiones.setColumns(20);
         txtConclusiones.setRows(2);
@@ -2651,7 +2654,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         jLabel101.setText("CIE 10 ");
 
         jPanel21.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "RECOMENDACIONES - RESTRICCIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "RECOMENDACIONES - RESTRICCIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
 
         txtRecomendaciones.setColumns(20);
         txtRecomendaciones.setRows(2);
@@ -3033,7 +3036,7 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
     }//GEN-LAST:event_txtNordenActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-       cerrarVentana();  // TODO add your handling code here:
+       //cerrarVentana();  // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
     private void rbCVTest_negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCVTest_negActionPerformed
@@ -3085,6 +3088,10 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         if(chkNormal.isSelected()){ 
       txtConclusiones.append("Normal" + '\n'); }
     }//GEN-LAST:event_chkNormalActionPerformed
+
+    private void txtImpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtImpActionPerformed
     
      
     private void Agregar(){
@@ -3354,9 +3361,16 @@ private void printer1(Integer cod){
     Map parameters = new HashMap(); 
     parameters.put("Norden",cod);      
         try {
-            String master = System.getProperty("user.dir") +
-                                "/reportes/EvaluacionMuscoloEsqueletica2021.jasper";
             
+              String master = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    master = System.getProperty("user.dir") +
+                                "/reportes/EvaluacionMuscoloEsqueletica2021_boro.jasper";
+                   }
+                   else 
+                    master = System.getProperty("user.dir") +
+                                "/reportes/EvaluacionMuscoloEsqueletica2021.jasper";
+    
             System.out.println("master" + master);
             if (master == null) {                
                 System.out.println("No encuentro el archivo del ficha antecedente patologico.");

@@ -3714,7 +3714,7 @@ if(!txtImp.getText().isEmpty()){
 }
 private boolean GrabarAPDetalle() {
          boolean bResult = false;
-                      
+                     eliminarTabla(); 
         // Variable para las filas de la Tabla de Productos
         int iFila;
         
@@ -4491,6 +4491,22 @@ private void printer2(Integer cod){
         
  
  }
+
+public void eliminarTabla(){
+       String sql = "DELETE FROM antecedentes_patologicos_quirurgicos"
+               + " WHERE cod_ap ='" +num+ "' RETURNING cod_ap";
+        if (oConn.FnBoolQueryExecute(sql)) {
+       
+        } else {
+            oFunc.SubSistemaMensajeError("No se pudo eliminar");
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(AntecedentesPatologicos.class.getName()).log(Level.SEVERE, null, ex);
+       }
+}
+
    
    
 

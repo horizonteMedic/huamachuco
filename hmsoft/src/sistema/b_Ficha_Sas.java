@@ -3925,9 +3925,14 @@ public void cerrarVentana(){
 private void printer1(Integer cod){
                  Map parameters = new HashMap(); 
                 parameters.put("Norden",cod);      
-                    try 
-                {                     
-                    String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS.jasper";
+                    try                 {       
+                     String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS.jasper";
+                   
                     JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
                      if(!txtNordenImp.getText().isEmpty()){
                          JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);
@@ -3947,8 +3952,15 @@ private void printer1(Integer cod){
                  Map parameters = new HashMap(); 
                 parameters.put("Norden",cod);      
                     try 
-                {                     
-                    String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS2.jasper";
+                {      
+                     String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS2_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"B_FichaDetencionSAS2.jasper";
+    
+                    
                     JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
                     if(!txtNordenImp.getText().isEmpty()){
                          JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);

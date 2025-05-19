@@ -196,7 +196,6 @@ public final class ElectroCardiogramaPoderosa extends javax.swing.JInternalFrame
         txtEje = new javax.swing.JTextField();
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Electrocardiograma Poderosa");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -936,7 +935,7 @@ public final class ElectroCardiogramaPoderosa extends javax.swing.JInternalFrame
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE))
+                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(btnLimpiarGrafico)
@@ -1855,7 +1854,7 @@ dispose();
     }//GEN-LAST:event_txtStActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-        cerrarVentana();// TODO add your handling code here:
+       // cerrarVentana();// TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
     private void txtOndaTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOndaTActionPerformed
@@ -2299,7 +2298,7 @@ public void cerrarVentana(){
                      +txtConclusiones.getText()+"','"
                      +txtRecomendaciones.getText()+"','"
                      +txtEdad.getText()+"')";
-                  oFunc.SubSistemaMensajeInformacion(Sql);
+                 // oFunc.SubSistemaMensajeInformacion(Sql);
                       if (oConn.FnBoolQueryExecuteUpdate(Sql)){
                         sbCargarDatosElectro("");  
                 //oFunc.SubSistemaMensajeInformacion("Se ha registrado la Entrada con Éxito");

@@ -3276,7 +3276,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="76" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3455,7 +3455,7 @@
                                   <Component id="txtLicorFrecuencia" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="chkLicFrecuencia" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3616,7 +3616,7 @@
                                   <Component id="txtDrogasFrecuencia" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="chkFreDrog" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4561,7 +4561,7 @@
                                   <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="48" max="32767" attributes="0"/>
+                          <EmptySpace pref="36" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">

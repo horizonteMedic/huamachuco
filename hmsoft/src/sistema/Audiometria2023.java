@@ -3033,7 +3033,7 @@ public final class Audiometria2023 extends javax.swing.JInternalFrame {
             Query += ",txtmeses='"+txtMeses.getText()+ "'";
             Query +=" WHERE n_orden='" + sCodigo + "'";
             //oFunc.SubSistemaMensajeInformacion(strSqlStmt);
-          
+          System.out.print(strSqlStmt);
             if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt + Query)){
                 oFunc.SubSistemaMensajeInformacion("Se ha actualizado con Éxito");
                 imprimir1();
@@ -3140,7 +3140,14 @@ if(!txtImp.getText().isEmpty()){
 
       try 
     {
-        String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Audiometria2021-.jasper";
+         String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Audiometria2021-_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Audiometria2021-.jasper";
+    
+                    
         JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
         JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);
         JasperViewer viewer = new JasperViewer(myPrint, false);
@@ -3745,17 +3752,22 @@ private void printer1(Integer cod) {
         Map parameters = new HashMap();
         parameters.put("Norden", cod);
         try {
-            String master = System.getProperty("user.dir")
-                    + "/reportes/Audiometria2021-.jasper";
-
-            System.out.println("master" + master);
-            if (master == null) {
+                String direccionReporte = "";
+                   if(oFunc.validarEmpresaBoro(cod.toString().trim())){
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Audiometria2021-_boro.jasper";
+                   }
+                   else 
+                    direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Audiometria2021-.jasper";
+    
+                 
+            System.out.println("master" + direccionReporte);
+            if (direccionReporte == null) {
                 System.out.println("No encuentro el archivo del reporte Audiometria 2023.");
                 //System.exit(2);
             }
             JasperReport masterReport = null;
             try {
-                masterReport = (JasperReport) JRLoader.loadObject(master);
+                masterReport = (JasperReport) JRLoader.loadObject(direccionReporte);
             } catch (JRException e) {
                 System.out.println("Error cargando el reporte maestro: " + e.getMessage());
                 System.exit(3);
