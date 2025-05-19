@@ -174,6 +174,7 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
         txtDepartamento1 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         txtApellidoMaterno = new javax.swing.JTextField();
+        btnEditar = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel76 = new javax.swing.JLabel();
@@ -583,7 +584,7 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EN CASO DE EMERGENCIA NOTIFICAR A:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(51, 0, 204))); // NOI18N
@@ -711,6 +712,14 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
             }
         });
 
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion.png"))); // NOI18N
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -793,7 +802,9 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel1)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(txtNorden, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(283, 283, 283)
+                                    .addGap(29, 29, 29)
+                                    .addComponent(btnEditar)
+                                    .addGap(174, 174, 174)
                                     .addComponent(jLabel20)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(FechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -903,7 +914,7 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
+                .addGap(1, 1, 1)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -937,7 +948,8 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel1)
                                 .addComponent(txtNorden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel20))
+                                .addComponent(jLabel20)
+                                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(FechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2138,6 +2150,45 @@ private void limpiar() {
                     }
                 
             }
+            else{/*
+                
+                     try {
+                        if (GrabarFPInfo()) {
+                            if (tbCompFamiliar.getRowCount() > 0) {
+                                if (GrabarCompFamiliar()) {
+//                                    oFunc.SubSistemaMensajeInformacion("cf");
+                                }
+                            } 
+                            if (tInstruccionAdq.getRowCount() > 0) {
+                                if (GrabarInstruccionAdq()) {
+//                                    oFunc.SubSistemaMensajeInformacion("ia");
+                                }
+                            } 
+                            if (tInstruccionAdq1.getRowCount() > 0) {
+                                if (GrabarInstruccionAdq1()) {
+//                                    oFunc.SubSistemaMensajeInformacion("ia");
+                                }
+                            } 
+                            if (tbExperienciaLaboral.getRowCount() > 0) {
+                               if (GrabarExperienciaLaboral()) {
+//                                    oFunc.SubSistemaMensajeInformacion("el");
+                                }
+                            }
+                            if (tbReferenciasPers.getRowCount() > 0) {
+                                if (GrabarReferenciasPers()) {
+//                                    oFunc.SubSistemaMensajeInformacion("rp");
+                                }
+                            } 
+                            oFunc.SubSistemaMensajeInformacion("Se Registro Correctamente");
+                            imprimir();
+                            limpiar();
+                           //System.exit(0);
+                        }
+                    } catch (SQLException ex) {
+                        Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+                    }           
+            */
+            }
         }
     }//GEN-LAST:event_btnAgregarDatosActionPerformed
 
@@ -2383,7 +2434,270 @@ private void limpiar() {
     private void txtApellidoMaternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoMaternoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApellidoMaternoActionPerformed
- private void print(Integer cod){
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        if(!txtNorden.getText().isEmpty()){
+                 String Sql="SELECT d.cod_pa, d.nombres_pa,estado_civil_pa, d.fecha_nacimiento_pa,d.sexo_pa,d.direccion_pa, d.departamento_pa, \n" +
+"       d.provincia_pa, d.distrito_pa,n.razon_empresa,n.razon_contrata , n.cargo_de, t.talla, t.peso,\n" +
+"       CASE WHEN l.chko = 'TRUE' THEN 'O'\n" +
+"            WHEN l.chka = 'TRUE' THEN 'A'\n" +
+"            WHEN l.chkb = 'TRUE' THEN 'B'\n" +
+"            WHEN l.chkab = 'TRUE' THEN 'AB' ELSE '.' END ||''|| \n" +
+"            CASE WHEN l.rbrhpositivo ='TRUE' THEN '+' \n" +
+"            WHEN l.rbrhnegativo = 'TRUE' THEN '-' END AS Grupoyfactor, d.tel_casa_pa,d.cel_pa,d.email_pa,fdp.* \n" +
+"FROM datos_paciente AS d \n" +
+"INNER JOIN n_orden_ocupacional AS n ON (d.cod_pa = n.cod_pa) INNER JOIN ficha_datos_personales AS fdp on (fdp.n_orden=n.n_orden) \n" +
+"LEFT JOIN lab_clinico AS l ON (l.n_orden = n.n_orden) \n" +
+"LEFT JOIN triaje  AS t ON (t.n_orden = n.n_orden)   \n" +
+"WHERE n.n_orden ="+txtNorden.getText()+" limit 1";
+                oConn.FnBoolQueryExecute(Sql);
+                try {
+                    if (oConn.setResult.next()) {
+                        txtNombres.setText(oConn.setResult.getString("nombres_pa"));
+                        txtApellidoPaterno.setText(oConn.setResult.getString("apellido_paterno"));
+                        txtApellidoMaterno.setText(oConn.setResult.getString("apellido_materno"));
+                        
+                        txtEmpresa.setText(oConn.setResult.getString("razon_contrata"));
+                        FechaNacimiento.setDate(oConn.setResult.getDate("fecha_nacimiento_pa"));
+//                        txtContratista.setText(oConn.setResult.getString("razon_contrata"));
+                        txtDni.setText(oConn.setResult.getString("cod_pa"));
+                        txtDomicilio.setText(oConn.setResult.getString("direccion_pa"));
+                        txtProvincia.setText(oConn.setResult.getString("provincia_pa"));
+                        txtDistrito.setText(oConn.setResult.getString("distrito_pa"));
+                        txtDepartamento.setText(oConn.setResult.getString("departamento_pa"));
+                        txtCargo.setText(oConn.setResult.getString("cargo_de"));
+//                        txtEdad.setText(String.valueOf(oFunc.calcularEdad(FechaNacimiento.getCalendar())) );
+                        txtEstatura.setText(oConn.setResult.getString("talla"));
+                        txtPeso.setText(oConn.setResult.getString("peso"));
+                        txtEstadoCivil.setText(oConn.setResult.getString("estado_civil_pa"));
+                        txtGrupoSan.setText(oConn.setResult.getString("Grupoyfactor"));
+                        txtTelefono.setText(oConn.setResult.getString("tel_casa_pa"));
+                        txtCelular.setText(oConn.setResult.getString("cel_pa"));
+                        txtCorreo.setText(oConn.setResult.getString("email_pa"));
+                        oPu.fecha(FechaIngreso);
+                        txtDistrito1.setText(oConn.setResult.getString("txtdistrito"));
+                        txtDepartamento1.setText(oConn.setResult.getString("txtdepartamento"));
+                        txtProvincia1.setText(oConn.setResult.getString("txtprovincia"));
+                        txtZona.setText(oConn.setResult.getString("txtzona"));
+                        txtCodigoDep.setText(oConn.setResult.getString("txtcodigo_dep"));
+                        txtCodAct.setText(oConn.setResult.getString("txtcodigo_act"));
+                        rbObrero.setSelected(oConn.setResult.getBoolean("chkobrero"));
+                        rbEmpleado.setSelected(oConn.setResult.getBoolean("chkempleado"));
+                        FechaIngreso.setDate(oConn.setResult.getDate("fechaingreso"));
+                        txtLicenciaC.setText(oConn.setResult.getString("txtlicencia_con"));
+                        txtLmilitar.setText(oConn.setResult.getString("txtlibrm"));
+                        txtAfp.setText(oConn.setResult.getString("txtafp"));
+                        txtCussp.setText(oConn.setResult.getString("txtcussp"));
+                        txtAutogenerado.setText(oConn.setResult.getString("txtautogenerado"));
+                        txtReferenciaDom.setText(oConn.setResult.getString("txtref_domic"));
+                        rbPropia.setSelected(oConn.setResult.getBoolean("chkpropia"));
+                        rbAlquilada.setSelected(oConn.setResult.getBoolean("chkalquilada"));
+                        txtRadio.setText(oConn.setResult.getString("txtrad_frec"));
+                        txtNumCuenta.setText(oConn.setResult.getString("txtnumcuenta"));
+                        txtBanco.setText(oConn.setResult.getString("txtbanco"));
+                        txtEmeNombres.setText(oConn.setResult.getString("txtnombres_emer"));
+                        txtEmeParentesco.setText(oConn.setResult.getString("txtparentesco_emer"));
+                        txtEmeTelefono.setText(oConn.setResult.getString("txttelefono_emer"));
+                        txtEmeDomicilio.setText(oConn.setResult.getString("txtdomicilio_emer"));
+                        txtEmeOtraRef.setText(oConn.setResult.getString("txtotrarefe"));
+                        txtSueldo.setText(oConn.setResult.getString("txtsueldo"));
+                        txtSistemaTrab.setText(oConn.setResult.getString("txtsist_trabajo"));
+                        rbTTSi.setSelected(oConn.setResult.getBoolean("chktansp_tsi"));
+                        rbTTNo.setSelected(oConn.setResult.getBoolean("chktranp_tno"));
+                        rbTASi.setSelected(oConn.setResult.getBoolean("chktrans_asi"));
+                        rbTANo.setSelected(oConn.setResult.getBoolean("chktrans_ano"));
+                        rbVSi.setSelected(oConn.setResult.getBoolean("chkviaticos_si"));
+                        rbVNo.setSelected(oConn.setResult.getBoolean("chkviaticos_no"));
+                        txtViaticos.setText(oConn.setResult.getString("txtviaticos"));
+                        txtAlimCuenta.setText(oConn.setResult.getString("txtalimcontrata"));
+                        num=Integer.valueOf(oConn.setResult.getString("cod_fd"));
+                        detalleaCapacitacion();
+                        detallesExperLaboral();
+                        detallesRefPersonales();
+                     //   txtCodAct.requestFocus();
+                    }else{
+                        oFunc.SubSistemaMensajeError("FALTAN DATOS");
+                    }
+                    oConn.sqlStmt.close();
+                    oConn.setResult.close();
+
+                } catch (SQLException ex) {
+                    oFunc.SubSistemaMensajeInformacion("FICGA DATOS PERSONALES:" + ex.getMessage().toString());}       
+        
+        }
+    }//GEN-LAST:event_btnEditarActionPerformed
+   private void detalleaCapacitacion(){
+//    String [] titulos={"N°Orden","Hospital","Operacion","Dias","complicaciones","Fecha"};
+
+    String [] registros = new String[5];
+      String sql = "SELECT instruccon, centro_est, fecha_inicio, fecha_termino,grado_obtenido "+
+                    "  FROM instruccion_adquirida_fdp "
+               + "WHERE cod_fd ='" + num + "'";
+
+    if (oConn.FnBoolQueryExecute(sql))
+        {
+             try  {
+                
+                while (oConn.setResult.next())
+                {        
+                    registros[0]= oConn.setResult.getString("instruccon");
+                    registros[1]= oConn.setResult.getString("centro_est");
+                    registros[2]= oConn.setResult.getString("fecha_inicio");
+                    registros[3]= oConn.setResult.getString("fecha_termino");
+                    registros[4]=oConn.setResult.getString("grado_obtenido");
+                    
+                     model.addRow(registros);
+                }
+                  // Coloca el Modelo de Nueva Cuenta
+                  tInstruccionAdq1.setModel(model);
+                 // Cierra Resultados
+                 oConn.setResult.close();
+            } 
+            catch (SQLException ex) 
+            {
+                //JOptionPane.showMessageDialorootPane,ex);
+                oFunc.SubSistemaMensajeError(ex.toString());
+                Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+  }
+    
+    private void detallesExperLaboral(){
+//    String [] titulos={"N°Orden","Hospital","Operacion","Dias","complicaciones","Fecha"};
+
+    String [] registros = new String[6];
+      String sql = "SELECT empresa, telefono, cargo_desemp, fecha_inicio, fecha_termino,motivo_salida "+
+                    "  FROM experiencia_laboral_fdp "
+               + "WHERE cod_fd ='" + num + "'";
+
+    if (oConn.FnBoolQueryExecute(sql))
+        {
+             try  {
+                
+                while (oConn.setResult.next())
+                {        
+                    registros[0]= oConn.setResult.getString("empresa");
+                    registros[1]= oConn.setResult.getString("telefono");
+                    registros[2]= oConn.setResult.getString("cargo_desemp");
+                    registros[3]= oConn.setResult.getString("fecha_inicio");
+                    registros[4]=oConn.setResult.getString("fecha_termino");
+                    registros[5]=oConn.setResult.getString("motivo_salida");
+                    
+                     model.addRow(registros);
+                }
+                  // Coloca el Modelo de Nueva Cuenta
+                  tbExperienciaLaboral.setModel(model);
+                 // Cierra Resultados
+                 oConn.setResult.close();
+            } 
+            catch (SQLException ex) 
+            {
+                //JOptionPane.showMessageDialorootPane,ex);
+                oFunc.SubSistemaMensajeError(ex.toString());
+                Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+  }
+  
+    private void detallesRefPersonales(){
+//    String [] titulos={"N°Orden","Hospital","Operacion","Dias","complicaciones","Fecha"};
+
+    String [] registros = new String[5];
+      String sql = "SELECT nombres, centro_trab, cargo_desemp, telefono, direccion "+
+                    "  FROM referncias_personales_fdp "
+               + "WHERE cod_fd ='" + num + "'";
+
+    if (oConn.FnBoolQueryExecute(sql))
+        {
+             try  {
+                
+                while (oConn.setResult.next())
+                {        
+                    registros[0]= oConn.setResult.getString("nombres");
+                    registros[1]= oConn.setResult.getString("centro_trab");
+                    registros[2]= oConn.setResult.getString("cargo_desemp");
+                    registros[3]= oConn.setResult.getString("telefono");
+                    registros[4]=oConn.setResult.getString("direccion");
+                    
+                     model.addRow(registros);
+                }
+                  // Coloca el Modelo de Nueva Cuenta
+                  tbExperienciaLaboral.setModel(model);
+                 // Cierra Resultados
+                 oConn.setResult.close();
+            } 
+            catch (SQLException ex) 
+            {
+                //JOptionPane.showMessageDialorootPane,ex);
+                oFunc.SubSistemaMensajeError(ex.toString());
+                Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+  }
+
+public void eliminarRefPersonales(){
+       String sql = "DELETE FROM referncias_personales_fdp"
+               + " WHERE cod_fd ='" +num+ "' RETURNING cod_fd";
+        if (oConn.FnBoolQueryExecute(sql)) {
+       
+        } else {
+            oFunc.SubSistemaMensajeError("No se pudo eliminar");
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+}
+   
+public void eliminaExperLaboral(){
+       String sql = "DELETE FROM experiencia_laboral_fdp"
+               + " WHERE cod_fd ='" +num+ "' RETURNING cod_fd";
+        if (oConn.FnBoolQueryExecute(sql)) {
+       
+        } else {
+            oFunc.SubSistemaMensajeError("No se pudo eliminar");
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+}
+   
+public void eliminaCapacitacion(){
+       String sql = "DELETE FROM instruccion_adquirida_fdp"
+               + " WHERE cod_fd ='" +num+ "' RETURNING cod_fd";
+        if (oConn.FnBoolQueryExecute(sql)) {
+       
+        } else {
+            oFunc.SubSistemaMensajeError("No se pudo eliminar");
+        }
+       try {
+           oConn.sqlStmt.close();
+       } catch (SQLException ex) {
+           Logger.getLogger(FichaDatosPersonales.class.getName()).log(Level.SEVERE, null, ex);
+       }
+}
+   
+
+
+private void print(Integer cod){
 
                 Map parameters = new HashMap(); 
                 parameters.put("Norden",cod);            
@@ -2702,6 +3016,7 @@ int seleccion = JOptionPane.showOptionDialog(
     private javax.swing.JButton btnAgregar2;
     private javax.swing.JButton btnAgregarDatos;
     private javax.swing.JButton btnAgregarRP;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JMenuItem btnEliminarCF;
     private javax.swing.JMenuItem btnEliminarEL;
     private javax.swing.JMenuItem btnEliminarIA;
