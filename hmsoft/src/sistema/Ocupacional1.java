@@ -475,6 +475,7 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
         jMenuItem23 = new javax.swing.JMenuItem();
         jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem25 = new javax.swing.JMenuItem();
+        jMenuItem26 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mConstanciaSaludMarsa1 = new javax.swing.JMenuItem();
         mFichaMedicaMarsa = new javax.swing.JMenuItem();
@@ -2353,6 +2354,14 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
             }
         });
         jMenu5.add(jMenuItem25);
+
+        jMenuItem26.setText("Test Fatiga y Somnolencia");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem26);
 
         MenuOcupacional.add(jMenu5);
 
@@ -5265,6 +5274,24 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
           //  JOptionPane.showMessageDialog(this,"Error: La ventana ya esta abierta...");
         }
     }//GEN-LAST:event_jMenuItem25ActionPerformed
+
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
+       
+         if(estacerrado(tfs2021)){
+            tfs2021 =new TestFatigaSomnolencia();
+            Desktop.add(tfs2021);
+            ImageIcon ticon = new ImageIcon(ClassLoader.getSystemResource("imagenes/enfermera.png"));
+            tfs2021.setFrameIcon(ticon);
+            tfs2021.setLocation(centradoXY(tfs2021));
+            tfs2021.show();
+            //fn.setVisible(true);
+        }else{
+            tfs2021.moveToFront();
+
+            //  JOptionPane.showMessageDialog(this,"Error: La ventana ya esta abierta...");
+        }
+        
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
 @Override
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/med.png"));
@@ -5417,6 +5444,7 @@ manager.addKeyEventDispatcher(new KeyEventDispatcher(){
     private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

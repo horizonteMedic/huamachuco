@@ -11,6 +11,7 @@ import Clases.clsFunciones;
 import Clases.clsGlobales;
 import Clases.clsOperacionesUsuarios;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -20,6 +21,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+
+import java.util.Date;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -47,12 +51,18 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
    Integer num= null;
    public AntecedentesPatologicosBoro() {
       initComponents();
+       Dimension min = new Dimension(1065, 630);
+    setMinimumSize(min);
+    setPreferredSize(min);
+    buttonGroup3.add(chkAlergiasMedicAlim);
+    buttonGroup3.add(rdbAlergiasNO);
       jtAntecedentes.setIconAt(0, new ImageIcon(ClassLoader.getSystemResource("imagenes/pildora.png")));
        jtAntecedentes.setIconAt(1, new ImageIcon(ClassLoader.getSystemResource("imagenes/lapiz.png")));
          jtAntecedentes.setIconAt(2, new ImageIcon(ClassLoader.getSystemResource("imagenes/enfermera.png")));
          txtMedico.setText(clsGlobales.sNomOperador);
          sbCargarDatosAP();
         habitos();
+        
         FechaNacimiento = new com.toedter.calendar.JDateChooser();
       
    }
@@ -83,7 +93,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         jLabel1 = new javax.swing.JLabel();
         txtNorden = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtNombres = new javax.swing.JTextField();
+        nombrecompleto = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txtSexo = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -101,15 +111,15 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         jLabel13 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         chkAcciTrabajo = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        acciTno = new javax.swing.JRadioButton();
         chkAcciTDescanso = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        descaMNO = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         chkEnfeProf = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        enferpNO = new javax.swing.JRadioButton();
         chkEnfeLabCalif = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        enferNO = new javax.swing.JRadioButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -237,8 +247,8 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         chkDrogas = new javax.swing.JCheckBox();
         chkFreDrog = new javax.swing.JCheckBox();
         btnNext = new javax.swing.JLabel();
-        txtCoca = new javax.swing.JTextField();
-        txtMarig = new javax.swing.JTextField();
+        txtCocaina = new javax.swing.JTextField();
+        txtMarihuana = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel141 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
@@ -253,9 +263,9 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         jLabel9 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         chkMedicamento = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        medicno = new javax.swing.JRadioButton();
         chkActivFisic = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
+        activifisicano = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         txtMedicamentoDetall = new javax.swing.JTextField();
@@ -355,10 +365,12 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         jLabel6.setText("Cod. Cliente:");
 
         setClosable(true);
-        setResizable(true);
         setTitle("Antecedentes Patológicos");
         setAutoscrolls(true);
-        setPreferredSize(new java.awt.Dimension(1065, 630));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(1145, 725));
+        setMinimumSize(new java.awt.Dimension(1145, 725));
+        setPreferredSize(new java.awt.Dimension(1145, 725));
         setVisible(true);
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -378,6 +390,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
             }
         });
 
+        jtAntecedentes.setName(""); // NOI18N
+
+        jPanel3.setMaximumSize(new java.awt.Dimension(876, 639));
+        jPanel3.setMinimumSize(new java.awt.Dimension(876, 639));
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Ingresar Información"));
 
         jLabel1.setText("N° Orden :");
@@ -395,7 +412,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
 
         jLabel2.setText("Nombres:");
 
-        txtNombres.setEditable(false);
+        nombrecompleto.setEditable(false);
 
         jLabel8.setText("Sexo :");
 
@@ -425,11 +442,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombrecompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtSexo, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addComponent(txtSexo, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
                 .addGap(2, 2, 2)
@@ -449,7 +466,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                                 .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel2)
-                                .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nombrecompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel8)
                                 .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -459,14 +476,31 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Marcar todas las enfermedades que ah tenido o tiene"));
+        jPanel4.setMaximumSize(new java.awt.Dimension(758, 543));
+        jPanel4.setMinimumSize(new java.awt.Dimension(758, 543));
 
         jLabel150.setText("Alergias a Medicamentos / Alimentos:");
 
         buttonGroup3.add(chkAlergiasMedicAlim);
         chkAlergiasMedicAlim.setText("SI");
+        chkAlergiasMedicAlim.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkAlergiasMedicAlimStateChanged(evt);
+            }
+        });
 
         buttonGroup3.add(rdbAlergiasNO);
         rdbAlergiasNO.setText("NO");
+        rdbAlergiasNO.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                rdbAlergiasNOStateChanged(evt);
+            }
+        });
+        rdbAlergiasNO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbAlergiasNOActionPerformed(evt);
+            }
+        });
 
         jLabel151.setText("Especifique:");
 
@@ -474,18 +508,33 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
 
         buttonGroup4.add(chkAcciTrabajo);
         chkAcciTrabajo.setText("SI");
+        chkAcciTrabajo.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkAcciTrabajoStateChanged(evt);
+            }
+        });
 
-        buttonGroup4.add(jRadioButton6);
-        jRadioButton6.setText("NO");
+        buttonGroup4.add(acciTno);
+        acciTno.setText("NO");
+        acciTno.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                acciTnoStateChanged(evt);
+            }
+        });
 
         buttonGroup5.add(chkAcciTDescanso);
         chkAcciTDescanso.setText("SI");
 
-        buttonGroup5.add(jRadioButton4);
-        jRadioButton4.setText("NO");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup5.add(descaMNO);
+        descaMNO.setText("NO");
+        descaMNO.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                descaMNOStateChanged(evt);
+            }
+        });
+        descaMNO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                descaMNOActionPerformed(evt);
             }
         });
 
@@ -499,11 +548,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addComponent(chkAcciTrabajo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jRadioButton6))
+                        .addComponent(acciTno))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addComponent(chkAcciTDescanso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton4)
+                        .addComponent(descaMNO)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -513,11 +562,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGap(0, 0, 0)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chkAcciTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acciTno, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chkAcciTDescanso, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(descaMNO, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jLabel7.setText("fecha Accidente");
@@ -525,19 +574,19 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         buttonGroup6.add(chkEnfeProf);
         chkEnfeProf.setText("SI");
 
-        buttonGroup6.add(jRadioButton10);
-        jRadioButton10.setText("NO");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup6.add(enferpNO);
+        enferpNO.setText("NO");
+        enferpNO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                enferpNOActionPerformed(evt);
             }
         });
 
         buttonGroup7.add(chkEnfeLabCalif);
         chkEnfeLabCalif.setText("SI");
 
-        buttonGroup7.add(jRadioButton8);
-        jRadioButton8.setText("NO");
+        buttonGroup7.add(enferNO);
+        enferNO.setText("NO");
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -551,9 +600,9 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(enferpNO, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 14, Short.MAX_VALUE))
-                    .addComponent(jRadioButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(enferNO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel21Layout.setVerticalGroup(
@@ -562,11 +611,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chkEnfeProf, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(enferpNO, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chkEnfeLabCalif, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(enferNO, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -616,7 +665,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(fechaAcciT, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -647,8 +696,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                                 .addGap(1, 1, 1)
                                 .addComponent(txtEnfeLabCalifDetall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         jLabel149.setText("Especifique detalles o tratamiento marcada:");
@@ -1266,7 +1314,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                                 .addGap(2, 2, 2)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(chkEnfPsiquiatricas)
-                                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtotrosap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1283,18 +1331,8 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtAlergiasMedicAlimDetall, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(524, 524, 524)
-                                .addComponent(jLabel36))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel149)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtEspecifiqueDetalleEnfermedades, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel4Layout.createSequentialGroup()
                             .addComponent(jLabel150)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1302,16 +1340,29 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(rdbAlergiasNO)
                             .addGap(30, 30, 30)
-                            .addComponent(jLabel151)))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(98, Short.MAX_VALUE))
+                            .addComponent(jLabel151))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtAlergiasMedicAlimDetall, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addGap(524, 524, 524)
+                                        .addComponent(jLabel36))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel149)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtEspecifiqueDetalleEnfermedades, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1327,7 +1378,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                         .addComponent(txtAlergiasMedicAlimDetall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
@@ -1347,13 +1398,13 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnEditar))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -1365,9 +1416,9 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7))
+                .addGap(10, 10, 10))
         );
 
         jtAntecedentes.addTab("Antecedentes Patológicos", jPanel3);
@@ -1405,6 +1456,12 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         });
 
         jLabel16.setText("Número de cigarrilos :");
+
+        txtNcigarrillos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNcigarrillosActionPerformed(evt);
+            }
+        });
 
         chkCigarrillos.setText("CIGARRILLOS X MES");
         chkCigarrillos.addActionListener(new java.awt.event.ActionListener() {
@@ -1668,9 +1725,9 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
             }
         });
 
-        txtCoca.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtCocaina.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        txtMarig.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtMarihuana.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel12.setText("COCAINA:");
 
@@ -1760,15 +1817,45 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
 
         buttonGroup8.add(chkMedicamento);
         chkMedicamento.setText("SI");
+        chkMedicamento.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkMedicamentoStateChanged(evt);
+            }
+        });
 
-        buttonGroup8.add(jRadioButton12);
-        jRadioButton12.setText("NO");
+        buttonGroup8.add(medicno);
+        medicno.setText("NO");
+        medicno.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                medicnoStateChanged(evt);
+            }
+        });
+        medicno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicnoActionPerformed(evt);
+            }
+        });
 
         buttonGroup9.add(chkActivFisic);
         chkActivFisic.setText("SI");
+        chkActivFisic.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkActivFisicStateChanged(evt);
+            }
+        });
 
-        buttonGroup9.add(jRadioButton14);
-        jRadioButton14.setText("NO");
+        buttonGroup9.add(activifisicano);
+        activifisicano.setText("NO");
+        activifisicano.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                activifisicanoStateChanged(evt);
+            }
+        });
+        activifisicano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                activifisicanoActionPerformed(evt);
+            }
+        });
 
         jLabel15.setText("Especifique:");
 
@@ -1792,11 +1879,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                             .addGroup(jPanel22Layout.createSequentialGroup()
                                 .addComponent(chkMedicamento)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton12))
+                                .addComponent(medicno))
                             .addGroup(jPanel22Layout.createSequentialGroup()
                                 .addComponent(chkActivFisic)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton14))))
+                                .addComponent(activifisicano))))
                     .addGroup(jPanel22Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1810,7 +1897,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(chkMedicamento)
-                    .addComponent(jRadioButton12))
+                    .addComponent(medicno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
@@ -1819,7 +1906,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(chkActivFisic)
-                    .addComponent(jRadioButton14))
+                    .addComponent(activifisicano))
                 .addGap(0, 4, Short.MAX_VALUE)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
@@ -1850,12 +1937,12 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                                         .addGroup(jPanel6Layout.createSequentialGroup()
                                             .addComponent(jLabel141)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtMarig))
+                                            .addComponent(txtMarihuana))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                                             .addComponent(jLabel12)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtCoca, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 13, Short.MAX_VALUE))
+                                            .addComponent(txtCocaina, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
@@ -1869,11 +1956,11 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                         .addComponent(btnNext)
                         .addGap(12, 12, 12)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCoca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCocaina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtMarig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMarihuana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel141)))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addContainerGap()
@@ -2361,7 +2448,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                         .addComponent(btnGrabar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtLimpiar)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -2382,7 +2469,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGrabar)
                     .addComponent(txtLimpiar))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jtAntecedentes.addTab("Antecedentes", jPanel11);
@@ -2572,7 +2659,7 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addComponent(jLabel138)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtEnfermedadesOculares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2585,19 +2672,19 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtAntecedentes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jtAntecedentes, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 161, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         pack();
@@ -2642,15 +2729,15 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         }
 
 
-        txtNombres.setText(oConn.setResult.getString("nombrecompleto"));
+        nombrecompleto.setText(oConn.setResult.getString("nombrecompleto"));
         String sexo = oConn.setResult.getString("sexo_pa");
         txtSexo.setText("M".equalsIgnoreCase(sexo) ? "MASCULINO" : "FEMENINO");
 
         FechaNacimiento.setDate(oConn.setResult.getDate("fecha_nacimiento_pa"));
         txtEdad.setText(oFunc.calcularEdad(FechaNacimiento.getCalendar()) + " AÑOS");
 
-        txtCoca.setText(oConn.setResult.getString("txtcocaina"));
-        txtMarig.setText(oConn.setResult.getString("txtmarihuana"));
+        txtCocaina.setText(oConn.setResult.getString("txtcocaina"));
+        txtMarihuana.setText(oConn.setResult.getString("txtmarihuana"));
 
         txtNorden.setEditable(false);
 
@@ -2867,42 +2954,73 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
     }//GEN-LAST:event_chkLicFrecuenciaActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-    if (txtNorden.getText().trim().isEmpty()) {
+   if (txtNorden.getText().trim().isEmpty()) {
         oFunc.SubSistemaMensajeInformacion("Ingrese N° Orden");
         return;
     }
 
-    String sql = "SELECT "
-        + "a.cod_ap, a.fecha_ap, a.edad_ap, a.dni_user, "
-        + "a.chk1, a.chk4, a.chk7, a.chk11, a.chk13, a.chk14, a.chk15, a.chk25, a.chk26, a.chk27, "
-        + "a.chk54, a.chk55, a.chk57, "
-        + "a.rbdrogasno, a.rbdrogassi, a.rblicorno, a.rblicorsi, a.rbfumarno, a.rbfumarsi,"
-        + "a.rbotrossi, a.rbotrosno,migrana, "
-        + "a.chkcovid, a.txtdosis, a.txtdrogasfrecuencia, a.txtdrogastipo, "
-        + "a.txtlicorfrecuencia, a.txtlicortipofrecuente, a.txtncigarrillos, "
-        + "a.txtotros, a.txtotrosfrecuencia, a.txtotrosap, "
-        + "a.ima, a.acv, a.tbc, a.vih, a.fobias, a.ets, a.vertigos, a.tifoidea, a.neoplasias, "
-        + "a.quemaduras, a.discopatias, a.columna, a.enf_psiquiatricas, a.enf_reumatica, "
-        + "a.enf_pulmonares, a.enf_piel, a.tendinitis, a.onicomicosis, a.fracturas, "
-        + "a.anemia, a.obesidad, a.dislipidemia, a.intoxicaciones, a.amputacion, a.sordera, "
-        + "a.especifique_detalleenfermedades, a.alergias_medic_alim, a.alergias_medic_alimdetall "
-        + "FROM antecedentes_patologicos a "
-        + "WHERE a.n_orden='" + txtNorden.getText().trim() + "'";
-    System.out.print(sql);
-
-    oConn.FnBoolQueryExecute(sql);
-
+    // 2) SELECT que une datos_paciente, n_orden_ocupacional, antecedentes_patologicos y lab_clinico
+    String sql = 
+      "SELECT " +
+      "  d.nombres_pa || ' ' || d.apellidos_pa AS nombrecompleto, " +
+      "  d.sexo_pa, " +
+      "  d.fecha_nacimiento_pa, " +
+      "  l.txtcocaina, " +
+      "  l.txtmarihuana, " +
+      "  a.cod_ap, " +
+      "  a.fecha_ap,a.edad_ap ," +
+      // — todos los chk?… —
+      "  a.chk1, a.chk4, a.chk7, a.chk11, a.chk13, " +
+      "  a.chk14, a.chk15, a.chk25, a.chk26, a.chk27, a.chk54, a.chk55, a.chk57, " +
+      "  a.rbdrogasno, a.rbdrogassi, a.rblicorno, a.rblicorsi, a.rbfumarno, a.rbfumarsi, a.rbotrossi,a.rbotrosno, a.migrana, " +
+      "  a.chkcovid, a.txtdosis, " +
+      // — condiciones médicas —
+      "  a.ima, a.acv, a.tbc, a.vih, a.fobias, a.ets, a.vertigos, a.tifoidea, a.neoplasias, " +
+      "  a.quemaduras, a.discopatias, a.columna, a.enf_psiquiatricas, a.enf_reumatica, " +
+      "  a.enf_pulmonares, a.enf_piel, a.tendinitis, a.onicomicosis, a.fracturas, " +
+      "  a.anemia, a.obesidad, a.dislipidemia, a.intoxicaciones, a.amputacion, a.sordera, " +
+      // — detalles y alergias —
+      "  a.especifique_detalleenfermedades, a.alergias_medic_alim, a.alergias_medic_alimdetall, " +
+      // — accidentes de trabajo —
+      "  a.accitrabajo, a.accit_fecha, a.accit_descanso, a.accit_descanso_detal, " +
+      // — enfermedad profesional —
+      "  a.enfe_prof, a.enfe_profecha, a.enfe_lab_calif, a.enfe_lab_califdetal, " +
+      // — vacunas —
+      "  a.antitetanica, a.fiebre_amarilla, a.influenza, a.hepatitisa, a.hepatitisb, " +
+      "  a.gripe_influenza, a.neumococo, a.rabia, a.papiloma_humano, " +
+  
+      "  a.medicamento, a.medicamento_detal, a.activ_fisic, a.activ_fisic_detal, " +
+      "  a.padre_detall, a.madre_detall, a.hermanos_detall, a.hijos_detall, a.espos_cony_detall, a.conadisdetalle, " +
+   
+      "  a.txtotros, a.txtotrosfrecuencia, a.txtotrosap " +
+      "FROM datos_paciente AS d, n_orden_ocupacional AS n " +
+      "  INNER JOIN antecedentes_patologicos AS a ON n.n_orden = a.n_orden " +
+      "  LEFT  JOIN lab_clinico          AS l ON n.n_orden = l.n_orden " +
+      "WHERE d.cod_pa = n.cod_pa " +
+      "  AND n.n_orden = '" + txtNorden.getText().trim() + "'";
+    System.out.println(sql);
     try {
-        if (!oConn.setResult.next()) {
-            oFunc.SubSistemaMensajeError("No se encontró ningún registro para la orden " + txtNorden.getText());
-            return;
+      // 3) Ejecuta y carga
+      oConn.FnBoolQueryExecute(sql);
+      if (oConn.setResult.next()) {
+        // ─── Datos Paciente ───
+        nombrecompleto.setText(oConn.setResult.getString("nombrecompleto"));
+        txtSexo.setText(oConn.setResult.getString("sexo_pa"));
+        java.sql.Date dNac = oConn.setResult.getDate("fecha_nacimiento_pa");
+        if (dNac != null) {
+          FechaNacimiento.setDate(new java.util.Date(dNac.getTime()));
         }
+        txtCocaina.setText(oConn.setResult.getString("txtcocaina"));
+        txtMarihuana.setText(oConn.setResult.getString("txtmarihuana"));
 
+        // ─── Antecedentes Ocupacionales ───
+        // Guarda cod_ap si lo necesitas
+        num = oConn.setResult.getInt("cod_ap");
 
         FechaPatologicos.setDate(oConn.setResult.getDate("fecha_ap"));
         txtEdad.setText(oConn.setResult.getString("edad_ap"));
-        num=Integer.valueOf(oConn.setResult.getString("cod_ap"));
 
+        // Checkboxes principales
         chk1.setSelected(oConn.setResult.getBoolean("chk1"));
         chk4.setSelected(oConn.setResult.getBoolean("chk4"));
         chk7.setSelected(oConn.setResult.getBoolean("chk7"));
@@ -2916,13 +3034,29 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         chk54.setSelected(oConn.setResult.getBoolean("chk54"));
         chk55.setSelected(oConn.setResult.getBoolean("chk55"));
         chk57.setSelected(oConn.setResult.getBoolean("chk57"));
-        
+
+        // Drogas/Licor/Fumar/Migraña
+        rbDrogasNO .setSelected(oConn.setResult.getBoolean("rbdrogasno"));
+        rbDrogasSI .setSelected(oConn.setResult.getBoolean("rbdrogassi"));
+        rbLicorNO  .setSelected(oConn.setResult.getBoolean("rblicorno"));
+        rbLicorSI  .setSelected(oConn.setResult.getBoolean("rblicorsi"));
+        rbFumarNO  .setSelected(oConn.setResult.getBoolean("rbfumarno"));
+        rbFumarSI  .setSelected(oConn.setResult.getBoolean("rbfumarsi"));
+        rbOtrossi  .setSelected(oConn.setResult.getBoolean("rbotrossi"));
+        rbOtrosno  .setSelected(oConn.setResult.getBoolean("rbotrosno"));
+        chkmigraña .setSelected(oConn.setResult.getBoolean("migrana"));
+
+        // Covid y dosis
+        chkCovid.setSelected(oConn.setResult.getBoolean("chkcovid"));
+        txtDosis.setText(oConn.setResult.getString("txtdosis"));
+
+        // Condiciones médicas
         chkIMA.setSelected(oConn.setResult.getBoolean("ima"));
         chkACV.setSelected(oConn.setResult.getBoolean("acv"));
         chkTBC.setSelected(oConn.setResult.getBoolean("tbc"));
-        chkets.setSelected(oConn.setResult.getBoolean("ets"));
         chkVIH.setSelected(oConn.setResult.getBoolean("vih"));
         chkFobias.setSelected(oConn.setResult.getBoolean("fobias"));
+        chkets.setSelected(oConn.setResult.getBoolean("ets"));
         chkVertigos.setSelected(oConn.setResult.getBoolean("vertigos"));
         chkTifoidea.setSelected(oConn.setResult.getBoolean("tifoidea"));
         chkNeoplasias.setSelected(oConn.setResult.getBoolean("neoplasias"));
@@ -2938,38 +3072,112 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         chkFracturas.setSelected(oConn.setResult.getBoolean("fracturas"));
         chkAnemia.setSelected(oConn.setResult.getBoolean("anemia"));
         chkObesidad.setSelected(oConn.setResult.getBoolean("obesidad"));
-        chkSordera.setSelected(oConn.setResult.getBoolean("sordera"));
+        chkDislipidemia.setSelected(oConn.setResult.getBoolean("dislipidemia"));
+        chkIntoxicaciones.setSelected(oConn.setResult.getBoolean("intoxicaciones"));
         chkAmputacion.setSelected(oConn.setResult.getBoolean("amputacion"));
+        chkSordera.setSelected(oConn.setResult.getBoolean("sordera"));
 
-    
-        rbDrogasNO.setSelected(oConn.setResult.getBoolean("rbdrogasno"));
-        rbDrogasSI.setSelected(oConn.setResult.getBoolean("rbdrogassi"));
-        rbLicorNO.setSelected(oConn.setResult.getBoolean("rblicorno"));
-        rbLicorSI.setSelected(oConn.setResult.getBoolean("rblicorsi"));
-        rbFumarNO.setSelected(oConn.setResult.getBoolean("rbfumarno"));
-        rbFumarSI.setSelected(oConn.setResult.getBoolean("rbfumarsi"));
-        rbOtrossi.setSelected(oConn.setResult.getBoolean("rbotrossi"));
-        rbOtrosno.setSelected(oConn.setResult.getBoolean("rbotrosno"));
-        chkmigraña.setSelected(oConn.setResult.getBoolean("migrana"));
+        // Detalles y alergias
+        txtEspecifiqueDetalleEnfermedades.setText(
+            oConn.setResult.getString("especifique_detalleenfermedades"));
+        if(oConn.setResult.getBoolean("alergias_medic_alim"))
+        chkAlergiasMedicAlim.setSelected(true);
+        else
+        rdbAlergiasNO.setSelected(true);
+        
+        txtAlergiasMedicAlimDetall.setText(
+            oConn.setResult.getString("alergias_medic_alimdetall"));
 
-        txtDrogasFrecuencia.setText(oConn.setResult.getString("txtdrogasfrecuencia"));
-        txtDrogasTipo.setText(oConn.setResult.getString("txtdrogastipo"));
-        txtLicorFrecuencia.setText(oConn.setResult.getString("txtlicorfrecuencia"));
-        txtLicorTipoFrecuente.setText(oConn.setResult.getString("txtlicortipofrecuente"));
-        txtNcigarrillos.setText(oConn.setResult.getString("txtncigarrillos"));
-        txtotros.setText(oConn.setResult.getString("txtotros"));
-        txtotrosfrecuencia.setText(oConn.setResult.getString("txtotrosfrecuencia"));
-        txtotrosap.setText(oConn.setResult.getString("txtotrosap"));
+        // Accidentes de trabajo
+        if(oConn.setResult.getBoolean("accitrabajo"))
+        chkAcciTrabajo.setSelected(true);
+        else 
+        acciTno.setSelected(true); 
+        
+        java.sql.Date dAcc = oConn.setResult.getDate("accit_fecha");
+        if (dAcc != null) {
+          fechaAcciT.setDate(new java.util.Date(dAcc.getTime()));
+        }
+        if(oConn.setResult.getBoolean("accit_descanso"))
+        chkAcciTDescanso.setSelected(true);
+        else descaMNO.setSelected(true);
+        txtAcciDescansoDetall.setText(
+            oConn.setResult.getString("accit_descanso_detal"));
 
-        chkCovid.setSelected(oConn.setResult.getBoolean("chkcovid"));
-        txtDosis.setText(oConn.setResult.getString("txtdosis"));
-                        detalleantecedentes();
+        // Enfermedad profesional
+        if(oConn.setResult.getBoolean("enfe_prof"))
+        chkEnfeProf.setSelected(true);
+        else enferpNO.setSelected(true);
+        
+        java.sql.Date dEnf = oConn.setResult.getDate("enfe_profecha");
+        if (dEnf != null) {
+          fechaEnfeProf.setDate(new java.util.Date(dEnf.getTime()));
+        }
+        if(oConn.setResult.getBoolean("enfe_lab_calif"))
+        chkEnfeLabCalif.setSelected(true);
+        else   enferNO.setSelected(true);
+        txtEnfeLabCalifDetall.setText(
+            oConn.setResult.getString("enfe_lab_califdetal"));
 
-    } catch (SQLException ex) {
-        oFunc.SubSistemaMensajeInformacion("Error al cargar edición: " + ex.getMessage());
-    } finally {
-        try { oConn.sqlStmt.close(); } catch (SQLException ignore) {}
-    } 
+        // Vacunas
+        chkAntitetanica .setSelected(oConn.setResult.getBoolean("antitetanica"));
+        chkFiebreAmarilla.setSelected(oConn.setResult.getBoolean("fiebre_amarilla"));
+        chkInfluenza     .setSelected(oConn.setResult.getBoolean("influenza"));
+        chkHepatitisA    .setSelected(oConn.setResult.getBoolean("hepatitisa"));
+        chkHepatitisB    .setSelected(oConn.setResult.getBoolean("hepatitisb"));
+        chkGripeInfluenza.setSelected(oConn.setResult.getBoolean("gripe_influenza"));
+        chkNeumococo     .setSelected(oConn.setResult.getBoolean("neumococo"));
+        chkRabia         .setSelected(oConn.setResult.getBoolean("rabia"));
+        chkPapilomaHumano.setSelected(oConn.setResult.getBoolean("papiloma_humano"));
+
+        // Medicamentos actuales
+        if(oConn.setResult.getBoolean("medicamento"))
+        chkMedicamento.setSelected(true);
+        else medicno.setSelected(true);
+        
+        
+        txtMedicamentoDetall .setText   (oConn.setResult.getString("medicamento_detal"));
+
+        // Actividad física
+        if(oConn.setResult.getBoolean("activ_fisic"))
+        chkActivFisic.setSelected(true);
+        else  activifisicano.setSelected(true);
+        txtActivFisicDetall  .setText   (oConn.setResult.getString("activ_fisic_detal"));
+
+        // Datos familiares
+        txtPadreDetall       .setText   (oConn.setResult.getString("padre_detall"));
+        txtMadreDetall       .setText   (oConn.setResult.getString("madre_detall"));
+        txtHermanosDetall    .setText   (oConn.setResult.getString("hermanos_detall"));
+        txtHijosDetall       .setText   (oConn.setResult.getString("hijos_detall"));
+        txtEsposConyDetall   .setText   (oConn.setResult.getString("espos_cony_detall"));
+        txtConadisDetalle    .setText   (oConn.setResult.getString("conadisdetalle"));
+
+        // Otros textos
+        txtotros             .setText   (oConn.setResult.getString("txtotros"));
+        txtotrosfrecuencia   .setText   (oConn.setResult.getString("txtotrosfrecuencia"));
+        chkmigraña           .setSelected(oConn.setResult.getBoolean("migrana"));
+        txtotrosap           .setText   (oConn.setResult.getString("txtotrosap"));
+
+        // Carga extra de detalles si lo necesitas
+        detalleantecedentes();
+        muestraVisual();
+        Oftalmologia();
+        
+      } else {
+        oFunc.SubSistemaMensajeError(
+          "No se encontró ningún registro para la orden " + txtNorden.getText());
+      }
+    }
+    catch (SQLException ex) {
+      oFunc.SubSistemaMensajeInformacion(
+        "Error al cargar edición: " + ex.getMessage());
+    }
+    finally {
+      try { oConn.setResult.close(); } catch (Exception ignore) {}
+      try { oConn.sqlStmt.close();    } catch (Exception ignore) {}
+    }
+   
+
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
@@ -3037,13 +3245,13 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDosisActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void enferpNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enferpNOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_enferpNOActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void descaMNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descaMNOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_descaMNOActionPerformed
 
     private void chkPapilomaHumanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkPapilomaHumanoActionPerformed
         // TODO add your handling code here:
@@ -3064,6 +3272,97 @@ public final class AntecedentesPatologicosBoro extends javax.swing.JInternalFram
     private void chkmigrañaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkmigrañaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_chkmigrañaActionPerformed
+
+    private void txtNcigarrillosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNcigarrillosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNcigarrillosActionPerformed
+
+    private void medicnoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_medicnoStateChanged
+       
+        if(medicno.isSelected()){
+        txtMedicamentoDetall.setText(null);
+        txtMedicamentoDetall.setEditable(false);
+      
+        }
+    }//GEN-LAST:event_medicnoStateChanged
+
+    private void medicnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicnoActionPerformed
+
+    private void activifisicanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_activifisicanoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_activifisicanoActionPerformed
+
+    private void activifisicanoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_activifisicanoStateChanged
+         if(activifisicano.isSelected()){
+        txtActivFisicDetall.setText(null);
+        txtActivFisicDetall.setEditable(false);
+      
+        }
+    }//GEN-LAST:event_activifisicanoStateChanged
+
+    private void rdbAlergiasNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbAlergiasNOActionPerformed
+
+    }//GEN-LAST:event_rdbAlergiasNOActionPerformed
+
+    private void rdbAlergiasNOStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rdbAlergiasNOStateChanged
+         if(rdbAlergiasNO.isSelected()){
+        txtAlergiasMedicAlimDetall.setText(null);
+        txtAlergiasMedicAlimDetall.setEditable(false);
+      
+        }
+    }//GEN-LAST:event_rdbAlergiasNOStateChanged
+
+    private void acciTnoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_acciTnoStateChanged
+          if(rdbAlergiasNO.isSelected()){ 
+          descaMNO.setSelected(false);
+        txtAcciDescansoDetall.setEditable(true);
+        txtAcciDescansoDetall.setText(null);
+        txtAcciDescansoDetall.setEditable(false);
+        fechaAcciT.setDate(null);
+      
+        }
+    }//GEN-LAST:event_acciTnoStateChanged
+
+    private void chkAlergiasMedicAlimStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkAlergiasMedicAlimStateChanged
+        if(chkAlergiasMedicAlim.isSelected()){
+       // txtAlergiasMedicAlimDetall.setText(null);
+        txtAlergiasMedicAlimDetall.setEditable(true);
+      
+        }
+    }//GEN-LAST:event_chkAlergiasMedicAlimStateChanged
+
+    private void chkMedicamentoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkMedicamentoStateChanged
+        if(chkMedicamento.isSelected()){
+        txtMedicamentoDetall.setEditable(true);
+      
+        }
+    }//GEN-LAST:event_chkMedicamentoStateChanged
+
+    private void chkActivFisicStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkActivFisicStateChanged
+       if(chkActivFisic.isSelected()){
+        txtActivFisicDetall.setEditable(true);
+      
+        }
+    }//GEN-LAST:event_chkActivFisicStateChanged
+
+    private void chkAcciTrabajoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkAcciTrabajoStateChanged
+         if(chkAcciTrabajo.isSelected()){
+            // chkAcciTDescanso.setSelected(true);
+             txtAcciDescansoDetall.setText(null);
+        txtAcciDescansoDetall.setEditable(true);
+      
+        }
+    }//GEN-LAST:event_chkAcciTrabajoStateChanged
+
+    private void descaMNOStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_descaMNOStateChanged
+          if(descaMNO.isSelected()){
+            // chkAcciTDescanso.isSelected(true);
+        txtAcciDescansoDetall.setEditable(false);
+      
+        }
+    }//GEN-LAST:event_descaMNOStateChanged
  private void muestraVisual() {
     String sql = ""
         + "SELECT "
@@ -3976,6 +4275,8 @@ private boolean ActualizarAPDetalle()
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser FechaPatologicos;
     private javax.swing.JTextField FechaQui;
+    private javax.swing.JRadioButton acciTno;
+    private javax.swing.JRadioButton activifisicano;
     private javax.swing.ButtonGroup bgDrogras;
     private javax.swing.ButtonGroup bgFumar;
     private javax.swing.ButtonGroup bgLicor;
@@ -4058,6 +4359,9 @@ private boolean ActualizarAPDetalle()
     private javax.swing.JCheckBox chkWiscky;
     private javax.swing.JCheckBox chkets;
     private javax.swing.JCheckBox chkmigraña;
+    private javax.swing.JRadioButton descaMNO;
+    private javax.swing.JRadioButton enferNO;
+    private javax.swing.JRadioButton enferpNO;
     private com.toedter.calendar.JDateChooser fechaAcciT;
     private com.toedter.calendar.JDateChooser fechaEnfeProf;
     private javax.swing.JLabel jLabel1;
@@ -4194,18 +4498,14 @@ private boolean ActualizarAPDetalle()
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTabbedPane jtAntecedentes;
     private javax.swing.JTabbedPane jtReproduccion;
+    private javax.swing.JRadioButton medicno;
+    private javax.swing.JTextField nombrecompleto;
     private javax.swing.JRadioButton rbDrogasNO;
     private javax.swing.JRadioButton rbDrogasSI;
     private javax.swing.JRadioButton rbFumarNO;
@@ -4223,7 +4523,7 @@ private boolean ActualizarAPDetalle()
     private javax.swing.JTextField txtCercaCorregidaOI;
     private javax.swing.JTextField txtCercaSinCorregirOD;
     private javax.swing.JTextField txtCercaSinCorregirOI;
-    private javax.swing.JTextField txtCoca;
+    private javax.swing.JTextField txtCocaina;
     private javax.swing.JTextField txtComplicacionesQui;
     private javax.swing.JTextArea txtConadisDetalle;
     private javax.swing.JTextField txtDosis;
@@ -4246,11 +4546,10 @@ private boolean ActualizarAPDetalle()
     private javax.swing.JTextArea txtLicorTipoFrecuente;
     private javax.swing.JButton txtLimpiar;
     private javax.swing.JTextField txtMadreDetall;
-    private javax.swing.JTextField txtMarig;
+    private javax.swing.JTextField txtMarihuana;
     private javax.swing.JTextField txtMedicamentoDetall;
     private javax.swing.JTextField txtMedico;
     private javax.swing.JTextField txtNcigarrillos;
-    private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtNorden;
     private javax.swing.JTextField txtOperacionQui;
     private javax.swing.JTextField txtPadreDetall;
@@ -4332,13 +4631,16 @@ boolean bResultado=true;
   
    return bResultado;
 }
+
+
+
 private void limpiar(){
 num = null;    
 txtNorden.setText(null);
 FechaNacimiento.setDate(null);
 FechaPatologicos.setDate(null);
 FechaQui.setText(null);
-txtNombres.setText(null);
+nombrecompleto.setText(null);
 txtSexo.setText(null);
 txtEdad.setText(null);
 txtNcigarrillos.setText(null);
@@ -4346,17 +4648,42 @@ txtLicorTipoFrecuente.setText(null);
 txtLicorFrecuencia.setText(null);
 txtDrogasTipo.setText(null);
 txtDrogasFrecuencia.setText(null);
-txtCoca.setText(null);
-txtMarig.setText(null);
+txtCocaina.setText(null);
+txtMarihuana.setText(null);
 txtotrosap.setText(null);
 txtotrosap.setText(null);
 bgDrogras.clearSelection();
 bgFumar.clearSelection();
 bgLicor.clearSelection();
 buttonGroup2.clearSelection();
+
+buttonGroup3.clearSelection();
+buttonGroup4.clearSelection();
+buttonGroup5.clearSelection();
+buttonGroup6.clearSelection();
+buttonGroup7.clearSelection();
+buttonGroup8.clearSelection();
+buttonGroup9.clearSelection();
+
+
 chk1.setSelected(false);
 chk7.setSelected(false);
 //chk9.setSelected(false);
+chkAntitetanica.setSelected(false);
+chkFiebreAmarilla.setSelected(false);
+chkInfluenza.setSelected(false);
+chkHepatitisA.setSelected(false);
+chkHepatitisB.setSelected(false);        
+chkGripeInfluenza.setSelected(false);        
+ chkNeumococo.setSelected(false);       
+ chkRabia.setSelected(false);
+chkPapilomaHumano.setSelected(false);
+ chkMedicamento.setSelected(false);        
+ chkActivFisic.setSelected(false); 
+ fechaAcciT.setDate(null);
+txtEnfeLabCalifDetall.setText(null);        
+         
+         
 chk11.setSelected(false);
 chk13.setSelected(false);
 chk14.setSelected(false);
@@ -4370,6 +4697,19 @@ chkFobias.setSelected(false);
 chk25.setSelected(false);
 chk26.setSelected(false);
 chk27.setSelected(false);
+txtotrosap.setText(null);
+txtEspecifiqueDetalleEnfermedades.setText(null);
+txtAlergiasMedicAlimDetall.setText(null);
+txtAcciDescansoDetall.setText(null);
+txtEnfeLabCalifDetall.setText(null);
+txtMedicamentoDetall.setText(null);
+txtActivFisicDetall.setText(null);
+txtPadreDetall.setText(null);
+txtMadreDetall.setText(null);
+txtHermanosDetall.setText(null);
+txtHijosDetall.setText(null);
+txtEsposConyDetall.setText(null);
+txtConadisDetalle.setText(null);
 //chk33.setSelected(false);
 //chk35.setSelected(false);
 //chk38.setSelected(false);
@@ -4416,6 +4756,7 @@ chkCovid.setSelected(false);
 //fechaCovid.setDate(null);
 buttonGroup1.clearSelection();
 txtDosis.setText(null);
+chkmigraña.setSelected(false);
 }
 public void habitos(){
         txtNcigarrillos.setEditable(false);

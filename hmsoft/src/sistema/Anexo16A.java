@@ -260,6 +260,7 @@ public final class Anexo16A extends javax.swing.JInternalFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        setClosable(true);
         setTitle("Anexo N° 16-A");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
@@ -1780,7 +1781,7 @@ public final class Anexo16A extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_no12ActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-      //  cerrarVentana();        // TODO add your handling code here:
+        cerrarVentana();        // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
 public void direccion(){

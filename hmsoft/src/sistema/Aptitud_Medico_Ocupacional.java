@@ -162,7 +162,6 @@ public class Aptitud_Medico_Ocupacional extends javax.swing.JInternalFrame {
         atxtRecomendaciones = new javax.swing.JTextArea();
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("CERTIFICADO DE APTITUD MEDICO OCUPACIONAL");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -286,7 +285,7 @@ public class Aptitud_Medico_Ocupacional extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(chkSede))
                     .addComponent(btnImprimir1))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
@@ -1448,7 +1447,7 @@ public static com.toedter.calendar.JDateChooser FechaNacimiento;
     }//GEN-LAST:event_chkRestriccionActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
-       cerrarVentana(); // TODO add your handling code here:
+      // cerrarVentana(); // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosing
 
     private void chkSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkSedeActionPerformed

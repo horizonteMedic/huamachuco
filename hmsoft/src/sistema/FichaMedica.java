@@ -4386,6 +4386,7 @@ public final class FichaMedica extends javax.swing.JInternalFrame {
 
         txtCoca.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtCoca.setText("NO REACTIVO");
+        txtCoca.setToolTipText("");
 
         jLabel125.setText("Marih.:");
 
@@ -6926,9 +6927,9 @@ public final class FichaMedica extends javax.swing.JInternalFrame {
                             }
                         }
 
-                        String coca = oConn.setResult.getString("txtcocaina");
-                        String marig = oConn.setResult.getString("txtmarihuana");
-                        if ("REACTIVO".equals(coca)) {
+                        String coca = oConn.setResult.getString("txtcocaina").trim();
+                        String marig = oConn.setResult.getString("txtmarihuana").trim();
+                        if ("REACTIVO".equals(coca) || "POSITIVO".equals(coca)) {
                             txtObservacionesFichaMedica.append(String.valueOf(contador) + "- TEST DE COCAINA: " + coca.concat(" COLABORADOR DE LA COMUNIDAD, CONSUME HOJA DE COCA.\n"));
                             txtCoca.setForeground(Color.red);
                             txtCoca.setText(coca);
@@ -6936,8 +6937,8 @@ public final class FichaMedica extends javax.swing.JInternalFrame {
                         } else {//txtObservacionesFichaMedica.append("-COCAINA: " + coca.concat("\n"));
                             txtCoca.setText(coca);
                         }
-                        if ("REACTIVO".equals(marig)) {
-                            txtObservacionesFichaMedica.append(String.valueOf(contador) + "-MARIHUANA: " + marig.concat(" COLABORADOR DE LA COMUNIDAD, CONSUME HOJA DE COCA.\n"));
+                        if ("REACTIVO".equals(marig) ||"POSITIVO".equals(marig)) {
+                            txtObservacionesFichaMedica.append(String.valueOf(contador) + "-MARIHUANA: " + marig.concat(".\n"));
                             txtMarig.setForeground(Color.red);
                             txtMarig.setText(marig);
                             contador++;

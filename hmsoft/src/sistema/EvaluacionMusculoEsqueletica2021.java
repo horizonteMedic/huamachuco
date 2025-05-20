@@ -404,7 +404,6 @@ public class EvaluacionMusculoEsqueletica2021 extends javax.swing.JInternalFrame
         );
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("EVALUACION MUSCULO ESQUELETICA");
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {

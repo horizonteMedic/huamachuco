@@ -7,7 +7,6 @@
   </NonVisualComponents>
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
-    <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="CERTIFICADO DE APTITUD MEDICO OCUPACIONAL"/>
   </Properties>
   <SyntheticProperties>
@@ -308,7 +307,7 @@
                       </Group>
                       <Component id="btnImprimir1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">

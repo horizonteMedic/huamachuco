@@ -80,7 +80,6 @@
   </NonVisualComponents>
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
-    <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="EVALUACION MUSCULO ESQUELETICA"/>
   </Properties>
   <SyntheticProperties>

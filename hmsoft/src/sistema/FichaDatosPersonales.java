@@ -53,6 +53,11 @@ public final class FichaDatosPersonales extends javax.swing.JInternalFrame {
     clsOperacionesUsuarios oPu = new clsOperacionesUsuarios();
     String dni;
     DefaultTableModel model;
+    DefaultTableModel mode2;
+    DefaultTableModel mode3;
+    DefaultTableModel mode4;
+    DefaultTableModel mode5;
+
     Integer num= null;
     public FichaDatosPersonales() {
         initComponents();
@@ -2511,10 +2516,10 @@ private void limpiar() {
                         txtViaticos.setText(oConn.setResult.getString("txtviaticos"));
                         txtAlimCuenta.setText(oConn.setResult.getString("txtalimcontrata"));
                         num=Integer.valueOf(oConn.setResult.getString("cod_fd"));
-                        detalleaCapacitacion();
-                        detallesExperLaboral();
-                        detallesRefPersonales();
-                     //   txtCodAct.requestFocus();
+                        //detalleaCapacitacion();
+                        //detallesExperLaboral();
+                        //detallesRefPersonales();
+                        //txtCodAct.requestFocus();
                     }else{
                         oFunc.SubSistemaMensajeError("FALTAN DATOS");
                     }
@@ -2536,8 +2541,7 @@ private void limpiar() {
 
     if (oConn.FnBoolQueryExecute(sql))
         {
-             try  {
-                
+             try  {                
                 while (oConn.setResult.next())
                 {        
                     registros[0]= oConn.setResult.getString("instruccon");
@@ -2574,7 +2578,6 @@ private void limpiar() {
       String sql = "SELECT empresa, telefono, cargo_desemp, fecha_inicio, fecha_termino,motivo_salida "+
                     "  FROM experiencia_laboral_fdp "
                + "WHERE cod_fd ='" + num + "'";
-
     if (oConn.FnBoolQueryExecute(sql))
         {
              try  {

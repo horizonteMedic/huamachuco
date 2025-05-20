@@ -6799,6 +6799,7 @@
                   <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="NO REACTIVO"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel125">
