@@ -1695,8 +1695,11 @@
                       <Color blue="66" green="66" red="ff" type="rgb"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="1">
-                        <StringItem index="0" value="Protocolo"/>
+                      <StringArray count="4">
+                        <StringItem index="0" value="APTO"/>
+                        <StringItem index="1" value="APTO CON RESTRICCION"/>
+                        <StringItem index="2" value="NO APTO"/>
+                        <StringItem index="3" value="INTERCONSULTA"/>
                       </StringArray>
                     </Property>
                   </Properties>

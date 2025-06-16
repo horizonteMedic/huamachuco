@@ -1664,7 +1664,7 @@ public final class RegistrarCliente extends javax.swing.JInternalFrame {
         });
 
         jComboBoxProtocolos.setBackground(new java.awt.Color(255, 102, 102));
-        jComboBoxProtocolos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Protocolo" }));
+        jComboBoxProtocolos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "APTO", "APTO CON RESTRICCION", "NO APTO", "INTERCONSULTA" }));
 
         btnAddOcupacion3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add.png"))); // NOI18N
         btnAddOcupacion3.addMouseListener(new java.awt.event.MouseAdapter() {
