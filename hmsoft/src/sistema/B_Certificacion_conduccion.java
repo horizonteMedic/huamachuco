@@ -1510,7 +1510,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
 
     private void txtNordenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNordenActionPerformed
          if(!txtNorden.getText().isEmpty()){
-          if(!oPe.nOrden(txtNorden, "b_certificado_conduccion"))  {
+          if(!oPe.nOrden(txtNorden, "b_certificado_conduccion "))  {
         FechaNacimiento = new com.toedter.calendar.JDateChooser();
      String Sql="select d.nombres_pa||' '||d.apellidos_pa AS nombre, d.sexo_pa, d.cod_pa, d.fecha_nacimiento_pa ,"
              + " n.area_o ,n.razon_empresa,n.nom_examen from datos_paciente AS d "
@@ -1637,11 +1637,12 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-       if(oPe.nOrden(txtNorden, "b_certificado_conduccion"))  {
-           Actualizar();
-       }else{
+             if (oPe.nOrden(txtNorden, "b_certificado_conduccion")) {
+            Actualizar();
+        } else {
             Agregar();
-       }
+        }
+   
         
     }//GEN-LAST:event_btnAgregarActionPerformed
 
@@ -1688,10 +1689,10 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_chkOR6ActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        if(!txtNorden.getText().isEmpty()){
+           if(!txtNorden.getText().isEmpty()){
         FechaNacimiento = new com.toedter.calendar.JDateChooser();
      String Sql="SELECT d.nombres_pa||' '||d.apellidos_pa AS nombre, d.sexo_pa, d.cod_pa, d.fecha_nacimiento_pa ,\n" +
-"       n.area_o ,n.razon_empresa, t.t_experiencia, t.edad, t.chk_primera, \n" +
+"       n.area_o ,n.razon_empresa, t.t_experiencia, t.chk_primera, \n" +
 "       t.chk_revalidacion, t.f_examen, t.chk_1_si, t.chk_1_no, t.chk_2_si, t.chk_2_no, \n" +
 "       t.chk_3_si, t.chk_3_no, t.chk_4_si, t.chk_4_no, t.chk_5_si, t.chk_5_no, t.chk_6_si, \n" +
 "       t.chk_6_no, t.chk_7_si, t.chk_7_no, t.chk_8_si, t.chk_8_no, t.chk_9_si, t.chk_9_no, \n" +
@@ -1704,7 +1705,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
 "       t.chk_28_si, t.chk_28_no, t.chk_29_si, t.chk_29_no, t.f_desde, t.f_hasta, \n" +
 "       t.chk_si, t.chk_no, t.chk_observado,t.b_c_observaciones, t.d_medicina, \n" +
 "       t.d_informacion, t.chk_apto_r, t.txtotros, t.chk_30_si, \n" +
-              "t.diabete_mellitus, " +
+             "t.diabete_mellitus, " +
   "t.insuficiencia_renalIV, " +
   "t.testSAS, " +
   "t.sustentacionpie, " +
@@ -1721,11 +1722,12 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
              try {
                     if (oConn.setResult.next()) {
                         txtNombres.setText(oConn.setResult.getString("nombre"));
+                      txtsexo.setText(oConn.setResult.getString("sexo_pa").equals("M")? "MASCULINO":"FEMENINO") ;
+                        
                         txtdni.setText(oConn.setResult.getString("cod_pa"));
                       FechaNacimiento.setDate(oConn.setResult.getDate("fecha_nacimiento_pa"));
-                      txtsexo.setText(oConn.setResult.getString("sexo_pa").equals("M")? "MASCULINO":"FEMENINO") ;
-                      txtempresa.setText(oConn.setResult.getString("razon_empresa"));
-                      txtareatrabajo.setText(oConn.setResult.getString("area_o"));
+                       txtareatrabajo.setText(oConn.setResult.getString("area_o"));
+                      txtempresa.setText(oConn.setResult.getString("razon_empresa"));                     
                         txtNorden.setEditable(false);
                         FechaExamen.requestFocusInWindow();
                         txtEdad.setText(String.valueOf(oFunc.calcularEdad(FechaNacimiento.getCalendar())) );
@@ -1785,40 +1787,62 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                         Chk28no.setSelected(oConn.setResult.getBoolean("chk_28_no"));
                         Chk29si.setSelected(oConn.setResult.getBoolean("chk_29_si"));
                         Chk29no.setSelected(oConn.setResult.getBoolean("chk_29_no"));
-                        Chk30si.setSelected(oConn.setResult.getBoolean("chk_30_si"));
-                        Chk30no.setSelected(oConn.setResult.getBoolean("chk_30_no"));
-                         checkDiabetsi.setSelected(oConn.setResult.getBoolean("diabete_mellitus"));
-                        checkinsuRenalsi.setSelected(oConn.setResult.getBoolean("insuficiencia_renalIV"));
-                        checkSASsi.setSelected(oConn.setResult.getBoolean("testSAS"));
-                        checkSustpiesi.setSelected(oConn.setResult.getBoolean("sustentacionpie"));
-                        txtComenDetalleAntecedentes.setText(  oConn.setResult.getString("comenDetalleAntecedentes"));
-                     
                         FechaDesde.setDate(oConn.setResult.getDate("f_desde"));
                         FechaHasta.setDate(oConn.setResult.getDate("f_hasta"));
                         chksi.setSelected(oConn.setResult.getBoolean("chk_si"));
+                          chkNoApto.setSelected(oConn.setResult.getBoolean("chk_no"));
                         chkObservado.setSelected(oConn.setResult.getBoolean("chk_observado"));
-                        chkNoApto.setSelected(oConn.setResult.getBoolean("chk_no"));
-                        chkAptoRestriccion.setSelected(oConn.setResult.getBoolean("chk_apto_r"));
+                        atxtObservaciones.setText(oConn.setResult.getString("b_c_observaciones"));
                         txtMedicinas.setText(oConn.setResult.getString("d_medicina"));
-                        txtInformacion.setText(oConn.setResult.getString("d_informacion") );
-                        atxtObservaciones.setText(oConn.setResult.getString("b_c_observaciones") );
+                        txtInformacion.setText(oConn.setResult.getString("d_informacion"));                     
+                        chkAptoRestriccion.setSelected(oConn.setResult.getBoolean("chk_apto_r"));
                         txtOtros.setText(oConn.setResult.getString("txtotros"));
-                        txtfc.setText(oConn.setResult.getString("f_cardiaca"));
-                        txtfc1.setText(oConn.setResult.getString("f_cardiaca"));
-                        txtfr.setText(oConn.setResult.getString("f_respiratoria"));
-                        txtfr1.setText(oConn.setResult.getString("f_respiratoria"));
-                      txtpa.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
-                      txtpa1.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
-                      txtTalla.setText(oConn.setResult.getString("talla")) ;
-                      txtTalla1.setText(oConn.setResult.getString("talla")) ;
+                          Chk30si.setSelected(oConn.setResult.getBoolean("chk_30_si"));
+                          
+                         if(oConn.setResult.getBoolean("diabete_mellitus"))
+                            checkDiabetsi.setSelected(true);
+                            else 
+                            checkDiabetno.setSelected(true);
+                         if(oConn.setResult.getBoolean("insuficiencia_renalIV"))
+                            checkinsuRenalsi.setSelected(true);
+                            else 
+                            checkinsuRenalno.setSelected(true); 
+                        
+                        
+                        if(oConn.setResult.getBoolean("testSAS"))
+                            checkSASsi.setSelected(true);
+                            else 
+                            checkSASno.setSelected(true); 
+                        
+                         if(oConn.setResult.getBoolean("sustentacionpie"))
+                            checkSustpiesi.setSelected(true);
+                            else 
+                            checkSustpieno.setSelected(true); 
+                        txtComenDetalleAntecedentes.setText(  oConn.setResult.getString("comenDetalleAntecedentes")); 
+                        Chk30no.setSelected(oConn.setResult.getBoolean("chk_30_no"));
+                        txtTalla.setText(oConn.setResult.getString("talla")) ;
+                        txtTalla1.setText(oConn.setResult.getString("talla")) ; 
+                      
                       txtPeso.setText(oConn.setResult.getString("peso"));
                       txtPeso1.setText(oConn.setResult.getString("peso"));
                       txtimc.setText(oConn.setResult.getString("imc"));
                       txtimc1.setText(oConn.setResult.getString("imc"));
-                      txtperimetrocuello.setText(oConn.setResult.getString("perimetro_cuello"));
                       txtperimetrocintura.setText(oConn.setResult.getString("cintura"));
-                      txtperimetrodecadera.setText(oConn.setResult.getString("cadera"));
+                      
                        txticc.setText(oConn.setResult.getString("icc"));
+                      
+                       txtperimetrodecadera.setText(oConn.setResult.getString("cadera"));
+                        txtfc.setText(oConn.setResult.getString("f_cardiaca"));
+                        txtfc1.setText(oConn.setResult.getString("f_cardiaca"));
+                        txtperimetrocuello.setText(oConn.setResult.getString("perimetro_cuello"));
+                        
+                      txtpa.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
+                      txtpa1.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
+                     txtfr.setText(oConn.setResult.getString("f_respiratoria"));
+                        txtfr1.setText(oConn.setResult.getString("f_respiratoria"));
+                      
+                      
+                     
 //                       atxtObservaciones.setText(null);
                        muestraVisual();
 //                       triaje();
@@ -2563,6 +2587,12 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         buttonGroup27.clearSelection();
         buttonGroup28.clearSelection();
         buttonGroup29.clearSelection();
+         buttonGroup30.clearSelection();
+        buttonGroup31.clearSelection();
+        buttonGroup32.clearSelection();
+        buttonGroup33.clearSelection();
+         buttonGroup34.clearSelection();
+          buttonGroup35.clearSelection();
     }
     private void limpiar(){
         txtNorden.setText(null);
@@ -2722,11 +2752,11 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
            
               strSqlStmt += ",dni_user";Query += ",'"+ clsGlobales.sDniOperador + "'";
               
-              if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt.concat(") ") + Query.concat(")"))){
-
-             imprimir();
+              if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt.concat(") ") + Query.concat(")"))){     
               oFunc.SubSistemaMensajeInformacion("Se ha registrado la Entrada con Éxito");
-           limpiar(); 
+              
+                  imprimir();
+                  limpiar(); 
                 try {
                     oConn.sqlStmt.close();
                 } catch (SQLException ex) {
@@ -2790,18 +2820,20 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         }
     }
  public void Actualizar(){
+     
      if(!txtNorden.getText().isEmpty()){
                 if(validar()){
             String strSqlStmt;
              String Query ;
+             System.out.println("VOY A VALIDAR");
             strSqlStmt="UPDATE b_certificado_conduccion ";
             Query="SET ";
               if (txtEdad.getText().trim().length()>= 1 )
-              {Query += "edad='"+txtEdad.getText().toString()+ "'";}
+              {Query += "edad='"+txtEdad.getText()+ "'";}
               if (((JTextField)FechaExamen.getDateEditor().getUiComponent()).getText().trim().length()> 1 )
               {Query+= ",f_examen='"+FechaExamen.getDate().toString()+ "'";}
               if (!txtexperiencia.getText().isEmpty())
-              {Query += ",t_experiencia='"+txtexperiencia.getText().toString()+ "'";}
+              {Query += ",t_experiencia='"+txtexperiencia.getText()+ "'";}
               //Chk
                Query += ",chk_1_si='"+Chk1si.isSelected()+ "'";
                Query += ",chk_1_no='"+Chk1no.isSelected()+ "'";
@@ -2870,14 +2902,13 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                Query += ",chk_apto_r='"+chkAptoRestriccion.isSelected()+ "'"; 
                //
               if (!atxtObservaciones.getText().isEmpty() )
-              {Query += ",b_c_observaciones='"+atxtObservaciones.getText().toString()+ "'";}
+              {Query += ",b_c_observaciones='"+atxtObservaciones.getText()+ "'";}
               if (!txtMedicinas.getText().isEmpty() )
-              {Query += ",d_medicina='"+txtMedicinas.getText().toString()+ "'";}
+              {Query += ",d_medicina='"+txtMedicinas.getText()+ "'";}
               if (!txtInformacion.getText().isEmpty() )
-              {Query += ",d_informacion='"+txtInformacion.getText().toString()+ "'";} 
+              {Query += ",d_informacion='"+txtInformacion.getText()+ "'";} 
               if (!txtOtros.getText().isEmpty() )
-              {Query += ",txtotros='"+txtOtros.getText().toString()+ "'";}
-              
+              {Query += ",txtotros='"+txtOtros.getText()+ "'";}              
                               
               Query += ",diabete_mellitus='" + checkDiabetsi.isSelected() + "'";
                 Query += ",insuficiencia_renalIV='" + checkinsuRenalsi.isSelected() + "'";
@@ -2886,15 +2917,18 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
                 if (!txtComenDetalleAntecedentes.getText().trim().isEmpty()) {
                     Query += ",comenDetalleAntecedentes='" 
                           + txtComenDetalleAntecedentes.getText().trim() 
-                          + "'";
+                          + "'";}
               
               Query += ",dni_user='"+ clsGlobales.sDniOperador + "'"
-                      + " where n_orden='"+txtNorden.getText().toString()+ "'";
+                      + " where n_orden='"+txtNorden.getText()+ "'";
 //             oFunc.SubSistemaMensajeError(strSqlStmt+Query);
+                    System.out.println( Query);
               if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt + Query)){
+                  
+                  
                   oFunc.SubSistemaMensajeInformacion("Se ha actualizado con Éxito");
                   imprimir();
-               limpiar();   
+                  limpiar();   
                     try {
                         oConn.sqlStmt.close();
                     } catch (SQLException ex) {
@@ -2912,7 +2946,7 @@ public class B_Certificacion_conduccion extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(B_Certificacion_conduccion.class.getName()).log(Level.SEVERE, null, ex);
         }
-     }
+     
  }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox Chk10no;

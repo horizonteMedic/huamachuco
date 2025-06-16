@@ -1618,13 +1618,14 @@ private void Limpiar(){
     chk11.setSelected(false);
 
 }
-  private void print(Integer cod){
+
+private void print(Integer cod){
 
                 Map parameters = new HashMap(); 
                 parameters.put("Norden",cod);             
                 
                   try 
-                {
+                {   
                     String direccionReporte = System.getProperty("user.dir")+File.separator+"reportes"+File.separator+"Aptitud_medico_ocupacional_11.jasper";
                     JasperReport myReport = (JasperReport) JRLoader.loadObjectFromFile(direccionReporte);
                     JasperPrint myPrint = JasperFillManager.fillReport(myReport,parameters,clsConnection.oConnection);

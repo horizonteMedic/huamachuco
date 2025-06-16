@@ -2493,7 +2493,7 @@ public final class Audiometria2021 extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
-             
+            
         if(!txtNumero.getText().isEmpty()){
             if(!OrdenExiste()){
             String Sql="SELECT datos_paciente.cod_pa, "

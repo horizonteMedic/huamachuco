@@ -1767,7 +1767,7 @@ public class B_Certificacion_Trabajo_Altura extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_Chk29siActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        if(!txtNorden.getText().isEmpty()){
+      if(!txtNorden.getText().isEmpty()){
           
         FechaNacimiento = new com.toedter.calendar.JDateChooser();
      String Sql="select d.nombres_pa||' '||d.apellidos_pa AS nombre, d.sexo_pa, d.cod_pa, d.fecha_nacimiento_pa , \n" +
@@ -1783,16 +1783,18 @@ public class B_Certificacion_Trabajo_Altura extends javax.swing.JInternalFrame {
 "       ca.chk_25_si, ca.chk_25_no, ca.chk_26_si, ca.chk_26_no, ca.chk_27_si, ca.chk_27_no, \n" +
 "       ca.chk_28_si, ca.chk_28_no, ca.f_desde, ca.f_hasta, ca.chk_si, ca.chk_observado, \n" +
 "       ca.d_medicina, ca.d_informacion, ca.chk_no_apto, \n" +
-"       ca.chk_apto_r, ca.b_c_observaciones, ca.ComentariosDetalleAntecedent, ca.chk_29_si, ca.chk_29_no, ca.chk_30_si, \n" +
-"       ca.suste_pie_15, ca.chk_30_no, t.talla, t.peso, t.imc, t.cintura, t.icc, t.cadera, t.temperatura, t.f_cardiaca, t.sat_02, t.perimetro_cuello, "
+"       ca.chk_apto_r, ca.b_c_observaciones,ca.ComentariosDetalleAntecedent, ca.chk_29_si, ca.chk_29_no, ca.chk_30_si, \n" +
+"       ca.suste_pie_15,  \n" +
+"       ca.chk_30_no, t.talla, t.peso, t.imc, t.cintura, t.icc, t.cadera,  t.f_cardiaca,  t.perimetro_cuello, "
            + "t.sistolica, t.diastolica, t.f_respiratoria \n" +
 "       from datos_paciente AS d\n" +
 "       INNER JOIN n_orden_ocupacional AS n ON (d.cod_pa=n.cod_pa) \n" +
 "       INNER JOIN b_certificado_altura AS ca ON (n.n_orden=ca.n_orden) \n" +
        "INNER JOIN triaje AS t ON (n.n_orden=t.n_orden) \n" +
 "       WHERE n.n_orden ='"+txtNorden.getText()+"'";
-     System.out.print(Sql);
-               oConn.FnBoolQueryExecute(Sql);                 
+     
+     System.out.println(Sql);
+               oConn.FnBoolQueryExecute(Sql);      
              try {
                     if (oConn.setResult.next()) {                        
                         txtNombres.setText(oConn.setResult.getString("nombre"));
@@ -1857,56 +1859,57 @@ public class B_Certificacion_Trabajo_Altura extends javax.swing.JInternalFrame {
                         Chk27si.setSelected(oConn.setResult.getBoolean("chk_27_si"));
                         Chk27no.setSelected(oConn.setResult.getBoolean("chk_27_no"));
                         Chk28si.setSelected(oConn.setResult.getBoolean("chk_28_si"));
-                        Chk28no.setSelected(oConn.setResult.getBoolean("chk_28_no"));
-                        Chk29si.setSelected(oConn.setResult.getBoolean("chk_29_si"));
-                        Chk29no.setSelected(oConn.setResult.getBoolean("chk_29_no"));
-                        Chk30si.setSelected(oConn.setResult.getBoolean("chk_30_si"));
-                        Chk30no.setSelected(oConn.setResult.getBoolean("chk_30_no"));
-                        chkSustePie15.setSelected(oConn.setResult.getBoolean("suste_pie_15"));
-
+                        Chk28no.setSelected(oConn.setResult.getBoolean("chk_28_no"));                        
                         FechaDesde.setDate(oConn.setResult.getDate("f_desde"));
                         FechaHasta.setDate(oConn.setResult.getDate("f_hasta"));
                         chksi.setSelected(oConn.setResult.getBoolean("chk_si"));
                         chkObservado.setSelected(oConn.setResult.getBoolean("chk_observado"));
+                        txtMedicinas.setText(oConn.setResult.getString("d_medicina"));
+                        txtInformacion.setText(oConn.setResult.getString("d_informacion") ); 
                         chkNoApto.setSelected(oConn.setResult.getBoolean("chk_no_apto"));
                         chkAptoRestriccion.setSelected(oConn.setResult.getBoolean("chk_apto_r"));
-                        txtMedicinas.setText(oConn.setResult.getString("d_medicina"));
-                        txtInformacion.setText(oConn.setResult.getString("d_informacion") );
-                        atxtObservaciones.setText(oConn.setResult.getString("b_c_observaciones") );
+                        atxtObservaciones.setText(oConn.setResult.getString("b_c_observaciones"));                                               
                         txtComentariosDetalleAntecedent.setText(oConn.setResult.getString("ComentariosDetalleAntecedent"));
+                        Chk29si.setSelected(oConn.setResult.getBoolean("chk_29_si"));
+                        Chk29no.setSelected(oConn.setResult.getBoolean("chk_29_no"));
+                        Chk30si.setSelected(oConn.setResult.getBoolean("chk_30_si"));
+                        chkSustePie15.setSelected(oConn.setResult.getBoolean("suste_pie_15"));                        
+                        Chk30no.setSelected(oConn.setResult.getBoolean("chk_30_no"));
+                         txtTalla.setText(oConn.setResult.getString("talla")) ;
+                        txtTalla1.setText(oConn.setResult.getString("talla")) ;
+                        txtPeso.setText(oConn.setResult.getString("peso"));
+                        txtPeso1.setText(oConn.setResult.getString("peso"));
+                         txtimc.setText(oConn.setResult.getString("imc"));
+                        txtimc1.setText(oConn.setResult.getString("imc"));
+                        txtperimetrocintura.setText(oConn.setResult.getString("cintura"));
+                        txticc.setText(oConn.setResult.getString("icc"));
+                        txtperimetrodecadera.setText(oConn.setResult.getString("cadera"));
 
                         txtfc.setText(oConn.setResult.getString("f_cardiaca"));
                         txtfc1.setText(oConn.setResult.getString("f_cardiaca"));
+                        txtperimetrocuello.setText(oConn.setResult.getString("perimetro_cuello"));
+                 
+                        txtpa.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
+                        txtpa1.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
                         txtfr.setText(oConn.setResult.getString("f_respiratoria"));
                         txtfr1.setText(oConn.setResult.getString("f_respiratoria"));
-                      txtpa.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
-                      txtpa1.setText(oConn.setResult.getString("sistolica").concat("/").concat(oConn.setResult.getString("diastolica")));
-                      txtTalla.setText(oConn.setResult.getString("talla")) ;
-                      txtTalla1.setText(oConn.setResult.getString("talla")) ;
-                      txtPeso.setText(oConn.setResult.getString("peso"));
-                      txtPeso1.setText(oConn.setResult.getString("peso"));
-                      txtimc.setText(oConn.setResult.getString("imc"));
-                      txtimc1.setText(oConn.setResult.getString("imc"));
-                      txtperimetrocuello.setText(oConn.setResult.getString("perimetro_cuello"));
-                      txtperimetrocintura.setText(oConn.setResult.getString("cintura"));
-                      txtperimetrodecadera.setText(oConn.setResult.getString("cadera"));
-                       txticc.setText(oConn.setResult.getString("icc"));
-                       atxtObservaciones.setText(null);
-                        muestraVisual();
-                        triaje();
-                        rayosx();
-                        Audiometria();
-                       }else{
-                        oFunc.SubSistemaMensajeError("No se encuentra Registro: \n 1- Intente de nuevo \n 2- Si el error sigue Registre Usuario o \n    Aperture EX-Preocupacional");
-                    }
-                    
-                oConn.sqlStmt.close();
-            } catch (SQLException ex) {
-            oFunc.SubSistemaMensajeInformacion("Error:" + ex.getMessage().toString());
-            }
-          
+                       
+
+                        // atxtObservaciones.setText(null);
+                          muestraVisual();
+                         // triaje();
+                          rayosx();
+                          Audiometria();
+                         }else{
+                          oFunc.SubSistemaMensajeError("No se encuentra Registro: \n 1- Intente de nuevo \n 2- Si el error sigue Registre Usuario o \n    Aperture EX-Preocupacional");
+                      }
+                  oConn.sqlStmt.close();
+              } catch (SQLException ex) {
+              oFunc.SubSistemaMensajeInformacion("Error:" + ex.getMessage().toString());
+              }
+
         }
-         String dato=txtimc1.getText().toString();
+         String dato=txtimc1.getText();
        float valor=Float.parseFloat(dato);
        if(valor>=30)
        {
@@ -2109,9 +2112,10 @@ public class B_Certificacion_Trabajo_Altura extends javax.swing.JInternalFrame {
               strSqlStmt += ",dni_user";Query += ",'"+ clsGlobales.sDniOperador + "'";
              System.out.print(strSqlStmt);
               if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt.concat(") ") + Query.concat(")"))){
-                  imprimir();
-               limpiar();   
+                    
              oFunc.SubSistemaMensajeInformacion("Se ha registrado la Entrada con Éxito");
+             imprimir();
+               limpiar(); 
              try {
                 oConn.sqlStmt.close();
             } catch (SQLException ex) {
@@ -3417,7 +3421,7 @@ int seleccion = JOptionPane.showOptionDialog(
                 System.out.print(strSqlStmt + Query);
               if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt + Query)){
                  oFunc.SubSistemaMensajeInformacion("Se ha actualizado con Éxito");
-                  imprimir();
+               imprimir();
                limpiar();   
                 try {
                     oConn.sqlStmt.close();
