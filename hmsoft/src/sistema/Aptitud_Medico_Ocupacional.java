@@ -6,6 +6,7 @@
 
 package sistema;
 
+import Clases.DisableSSLVerification;
 import Clases.GestorTime;
 import Clases.clsConnection;
 import Clases.clsFunciones;
@@ -13,7 +14,12 @@ import Clases.clsGlobales;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -1530,7 +1536,11 @@ public static com.toedter.calendar.JDateChooser FechaNacimiento;
                    bResult = true;
                    oConn.sqlStmt.close();
                }
-              
+                          try {
+                comunirApi();
+            } catch (Exception ex) {
+                Logger.getLogger(Aptitud_Medico_Ocupacional.class.getName()).log(Level.SEVERE, null, ex);
+            }
               oConn.sqlStmt.close();
                 oConn.setResult.close();
 
@@ -1748,6 +1758,57 @@ private void Limpiar(){
             }
         
     }
+       public void comunirApi() throws Exception {
+           
+           String norden=txtNorden.getText().trim();
+           String estado="";
+
+           if(chkApto.isSelected())
+           estado="APTO";
+           if(chkRestriccion.isSelected())
+           estado="APTO CON RESTRICCION";
+           if(chkNoApto.isSelected())
+           estado="NO APTO";           
+           
+           
+           
+         try {
+            DisableSSLVerification.disableSSL();  
+            URL url = new URL("https://hmintegracion.azurewebsites.net/api/v01/st/registros/estadoPacienteHuamachuco");
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("POST");
+            con.setRequestProperty("Content-Type", "application/json; utf-8");
+            con.setRequestProperty("Accept", "application/json");
+            con.setDoOutput(true);
+           
+//            System.out.println(Sql);
+            String jsonInputString = "{ \"nOrden\":"+ norden+ ", "
+                    + "\"estado\":\""+ estado+ " \" }";
+            System.out.println(jsonInputString);
+            try (OutputStream os = con.getOutputStream()) {
+                byte[] input = jsonInputString.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
+            int code = con.getResponseCode();
+            System.out.println("Response Code: " + code);
+            try (BufferedReader br = new BufferedReader(
+                    new InputStreamReader(con.getInputStream(), "utf-8"))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                    System.out.println("Response: " + response.toString());
+                   
+               
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
+    }
+   
     public void ActualizarAptitud(){
         String sCodigo=txtNorden.getText();
         String strSqlStmt;
@@ -1774,6 +1835,11 @@ private void Limpiar(){
              if(chkApto.isSelected() || chkRestriccion.isSelected()){
                         levantarObservacion();
             }
+            }
+            try {
+                comunirApi();
+            } catch (Exception ex) {
+                Logger.getLogger(Aptitud_Medico_Ocupacional.class.getName()).log(Level.SEVERE, null, ex);
             }
             imprimir();
             Limpiar();

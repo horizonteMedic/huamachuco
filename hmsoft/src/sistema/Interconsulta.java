@@ -5,11 +5,17 @@
 package sistema;
 
 import Caja.RegistrarCliente;
+import Clases.DisableSSLVerification;
 import Clases.clsConnection;
 import Clases.clsFunciones;
 import Clases.clsGlobales;
 import Clases.clsOperacionesUsuarios;
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -1024,7 +1030,6 @@ public final class Interconsulta extends javax.swing.JInternalFrame {
                 + "INNER JOIN triaje ON (n_orden_ocupacional.n_orden = triaje.n_orden) "
                 + "INNER JOIN ficha_interconsulta as f ON (n_orden_ocupacional.n_orden = f.n_orden) "
                 + "where f.n_orden ='"+txtNorden.getText()+"'and especialidad='"+txtEspecialidad.getText()+"'";
-
                 oConn.FnBoolQueryExecute(Sql);
                 try {
                     if (oConn.setResult.next()) {
@@ -1325,9 +1330,14 @@ public void direccion(){
        if (oConn.FnBoolQueryExecuteUpdate(Sql)){
                 //oFunc.SubSistemaMensajeInformacion("Se ha registrado la Entrada con Éxito");
                bResultado = true;  
-    
+               
                 }else{
              oFunc.SubSistemaMensajeError("No se pudo registrar La Entrada");}
+     try {
+         comunirApi();
+     } catch (Exception ex) {
+         Logger.getLogger(Interconsulta.class.getName()).log(Level.SEVERE, null, ex);
+     }
         try {
          oConn.sqlStmt.close();
      } catch (SQLException ex) {
@@ -1354,6 +1364,11 @@ return bResultado;
         //oFunc.SubSistemaMensajeInformacion(strSqlStmt);
         if (oConn.FnBoolQueryExecuteUpdate(strSqlStmt)) {
             oFunc.SubSistemaMensajeInformacion("Se ha actualizado la Entrada con Éxito");
+                 try {
+         comunirApi();
+     } catch (Exception ex) {
+         Logger.getLogger(Interconsulta.class.getName()).log(Level.SEVERE, null, ex);
+     }
             imp();
             limpiar();
             
@@ -1507,4 +1522,47 @@ private boolean validar(){
 
     }
 
+           public void comunirApi() throws Exception {
+           
+           String norden=txtNorden.getText().trim();
+           String estado="INTERCONSULTA";
+           
+           
+         try {
+            DisableSSLVerification.disableSSL();  
+            URL url = new URL("https://hmintegracion.azurewebsites.net/api/v01/st/registros/estadoPacienteHuamachuco");
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("POST");
+            con.setRequestProperty("Content-Type", "application/json; utf-8");
+            con.setRequestProperty("Accept", "application/json");
+            con.setDoOutput(true);
+           
+//            System.out.println(Sql);
+            String jsonInputString = "{ \"nOrden\":"+ norden+ ", "
+                    + "\"estado\":\""+ estado+ " \" }";
+            System.out.println(jsonInputString);
+            try (OutputStream os = con.getOutputStream()) {
+                byte[] input = jsonInputString.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
+            int code = con.getResponseCode();
+            System.out.println("Response Code: " + code);
+            try (BufferedReader br = new BufferedReader(
+                    new InputStreamReader(con.getInputStream(), "utf-8"))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                    System.out.println("Response: " + response.toString());
+                   
+               
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
+    }
+   
 }
